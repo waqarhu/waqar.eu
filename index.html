@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Waqar Hussain - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Waqar Hussain | DevOps Engineer</title>
+
+        <meta name="description" content="Waqar Hussain — DevOps Engineer specializing in Azure, Kubernetes, CI/CD, Terraform, and cloud automation. Building scalable infrastructure and streamlining delivery pipelines.">
+        <meta name="keywords" content="Waqar Hussain, DevOps, Azure, Kubernetes, Terraform, CI/CD, Cloud, Automation, SRE">
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Waqar Hussain | DevOps Engineer">
+        <meta property="og:description" content="DevOps Engineer & Cloud Specialist — Azure, Kubernetes, Terraform, CI/CD">
+        <meta property="og:url" content="https://waqar.eu/">
+        <meta property="og:image" content="/assets/og-image.png">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Waqar Hussain | DevOps Engineer">
+        <meta name="twitter:description" content="Building scalable infrastructure and automating workflows.">
+        <meta name="twitter:image" content="/assets/og-image.png">
+
+        <link rel="icon" href="/assets/favicon.ico">
+        <link rel="stylesheet" href="style.css">
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Waqar Hussain",
+            "url": "https://waqar.eu/",
+            "jobTitle": "DevOps Engineer",
+            "sameAs": [
+                "https://www.linkedin.com/in/waqar-eu/",
+                "https://github.com/waqarhu"
+            ]
+        }
+        </script>
 </head>
 <body>
+    <a class="skip-to-content" href="#main">Skip to content</a>
     <header>
         <nav>
             <div class="container">
@@ -22,10 +55,16 @@
         </nav>
     </header>
 
-    <section id="hero">
+    <main id="main">
+    <section id="hero" aria-label="Intro">
         <div class="container">
             <h2>DevOps Engineer & Cloud Specialist</h2>
             <p>Building scalable infrastructure and automating workflows</p>
+            <div class="cta">
+                <a class="btn primary" href="#projects">View Projects</a>
+                <a class="btn secondary" href="#contact">Hire Me</a>
+                <a class="btn ghost" href="https://www.linkedin.com/in/waqar-eu/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
         </div>
     </section>
 
@@ -37,17 +76,27 @@
         </div>
     </section>
 
-    <section id="experience">
+    <section id="experience" aria-label="Professional Experience">
         <div class="container">
             <h2>Experience</h2>
             <div class="experience-item">
-                <h3>DevOps Engineer</h3>
-                <p class="company">Your Company Name</p>
-                <p class="duration">2020 - Present</p>
+                <h3>Senior DevOps Engineer</h3>
+                <p class="company">Company — Location</p>
+                <p class="duration">YYYY - Present</p>
                 <ul>
-                    <li>Managed Azure DevOps pipelines and infrastructure</li>
-                    <li>Implemented automated deployment solutions</li>
-                    <li>Optimized CI/CD workflows for multiple teams</li>
+                    <li>Designed scalable CI/CD with Azure DevOps and GitHub Actions</li>
+                    <li>Containerized apps with Docker; orchestrated with Kubernetes</li>
+                    <li>Provisioned cloud infra via Terraform and IaC best practices</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>DevOps Engineer</h3>
+                <p class="company">Company — Location</p>
+                <p class="duration">YYYY - YYYY</p>
+                <ul>
+                    <li>Built observability stack (Prometheus, Grafana, ELK)</li>
+                    <li>Automated configuration with Ansible and pipelines</li>
+                    <li>Improved deployment lead time and reliability</li>
                 </ul>
             </div>
         </div>
@@ -96,7 +145,7 @@
         </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" aria-label="Highlighted Projects">
         <div class="container">
             <h2>Projects</h2>
             <div class="project-grid">
@@ -108,6 +157,10 @@
                         <span>Ansible</span>
                         <span>Python</span>
                     </div>
+                    <div class="actions">
+                        <a class="btn small" href="#" aria-label="Read case study">Case Study</a>
+                        <a class="btn small secondary" href="https://github.com/waqarhu" target="_blank" rel="noopener">Code</a>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>Infrastructure Automation</h3>
@@ -117,17 +170,21 @@
                         <span>Ansible</span>
                         <span>Azure</span>
                     </div>
+                    <div class="actions">
+                        <a class="btn small" href="#" aria-label="Read case study">Case Study</a>
+                        <a class="btn small secondary" href="https://github.com/waqarhu" target="_blank" rel="noopener">Code</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" aria-label="Contact">
         <div class="container">
             <h2>Get In Touch</h2>
-            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-            <p>GitHub: <a href="https://github.com/waqarhu" target="_blank">github.com/waqarhu</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">Your LinkedIn</a></p>
+            <p>Email: <a href="mailto:contact@waqar.eu">contact@waqar.eu</a></p>
+            <p>GitHub: <a href="https://github.com/waqarhu" target="_blank" rel="noopener">github.com/waqarhu</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/waqar-eu/" target="_blank" rel="noopener">linkedin.com/in/waqar-eu</a></p>
         </div>
     </section>
 
@@ -136,5 +193,6 @@
             <p>&copy; 2025 Waqar Hussain. All rights reserved.</p>
         </div>
     </footer>
+    </main>
 </body>
 </html>
