@@ -1,369 +1,1189 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Waqar Hussain | DevOps Engineer</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vCard - Personal Portfolio</title>
 
-        <meta name="description" content="Waqar Hussain — DevOps Engineer specializing in Azure, Kubernetes, CI/CD, Terraform, and cloud automation. Building scalable infrastructure and streamlining delivery pipelines.">
-        <meta name="keywords" content="Waqar Hussain, DevOps, Azure, Kubernetes, Terraform, CI/CD, Cloud, Automation, SRE">
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="assets/images/logo.ico" type="image/x-icon">
 
-        <!-- Open Graph -->
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Waqar Hussain | DevOps Engineer">
-        <meta property="og:description" content="DevOps Engineer & Cloud Specialist — Azure, Kubernetes, Terraform, CI/CD">
-        <meta property="og:url" content="https://waqar.eu/">
-        <meta property="og:image" content="/assets/og-image.png">
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="assets/css/style.css">
 
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Waqar Hussain | DevOps Engineer">
-        <meta name="twitter:description" content="Building scalable infrastructure and automating workflows.">
-        <meta name="twitter:image" content="/assets/og-image.png">
-
-        <link rel="icon" href="/assets/favicon.ico">
-        <link rel="stylesheet" href="style.css?v=20251127">
-
-        <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Waqar Hussain",
-            "url": "https://waqar.eu/",
-            "jobTitle": "DevOps Engineer",
-            "sameAs": [
-                "https://www.linkedin.com/in/waqar-eu/",
-                "https://github.com/waqarhu"
-            ]
-        }
-        </script>
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <a class="skip-to-content" href="#main">Skip to content</a>
-    <header>
-        <nav>
-            <div class="container">
-                <h1>Waqar Hussain</h1>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
 
-    <main id="main">
-    <section id="hero" aria-label="Intro">
-        <div class="container">
-            <h2>DevOps Engineer & Cloud Specialist</h2>
-            <p>Building scalable infrastructure and automating workflows</p>
-            <div class="cta">
-                <a class="btn primary" href="#projects">View Projects</a>
-                <a class="btn secondary" href="#contact">Hire Me</a>
-                <a class="btn ghost" href="https://www.linkedin.com/in/waqar-eu/" target="_blank" rel="noopener">LinkedIn</a>
-            </div>
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="assets/images/my-avatar.png" alt="Waqar Hussain" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Waqar Hussain">Waqar Hussain</h1>
+
+          <p class="title">DevOps Engineer</p>
         </div>
-    </section>
 
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>DevOps engineer focused on Azure and Kubernetes with a track record of shipping reliable platforms and accelerating delivery. I design secure CI/CD, automate infrastructure with Terraform/Ansible, and build observability to keep systems healthy. Typical outcomes: faster releases, fewer incidents, and predictable environments.</p>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:contact@waqar.eu" class="contact-link">contact@waqar.eu</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:" class="contact-link">—</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="">—</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Amsterdam, North Holland, Netherlands</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://github.com/waqarhu" class="social-link" target="_blank" rel="noopener">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/waqar-eu/" class="social-link" target="_blank" rel="noopener">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            DevOps & Cloud Engineer focused on Azure, Kubernetes, and CI/CD. I design secure pipelines, automate infrastructure with Terraform & Ansible, and build observability so teams ship faster with fewer incidents.
+          </p>
+
+          <p>
+            I enjoy turning complex systems into reliable, repeatable workflows — from ETL pipelines (IBM InfoSphere & DataStage) to multi-cloud platforms on Azure, AWS, and GCP.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">CI/CD & Automation</h4>
+
+                <p class="service-item-text">
+                  Azure DevOps pipelines, GitHub Actions, and automated deployments for reliable delivery.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Containers & Kubernetes</h4>
+
+                <p class="service-item-text">
+                  Dockerized services, rollout strategies, autoscaling, and multi-cluster ops on AKS/EKS/GKE.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Observability</h4>
+
+                <p class="service-item-text">
+                  Prometheus, Grafana, ELK/Kibana, and actionable alerting to reduce MTTR.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Infra as Code</h4>
+
+                <p class="service-item-text">
+                  Terraform modules, policy-as-code, and secure secrets management for predictable environments.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
         </div>
-    </section>
 
-    <section id="experience" aria-label="Professional Experience">
-        <div class="container">
-            <h2>Experience</h2>
-            <div class="experience-item">
-                <div class="experience-header">
-                    <img class="company-logo" src="assets/ing.svg" alt="ING logo" loading="lazy">
-                    <div>
-                        <h3>DevOps Engineer</h3>
-                        <p class="company">ING · Permanent — Amsterdam, North Holland, Netherlands · Hybrid</p>
-                        <p class="duration">Sep 2023 — Present</p>
-                    </div>
-                </div>
-                <ul>
-                    <li>Expertise in monitoring with Prometheus, Grafana, and Kibana.</li>
-                    <li>Built robust CI/CD pipelines using Azure DevOps.</li>
-                    <li>Automated workflows for faster, error-free deployments.</li>
-                    <li>Designed scalable ETL pipelines with IBM InfoSphere & DataStage.</li>
-                    <li>Passionate about data-driven automation and system reliability.</li>
-                </ul>
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Clients</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="assets/images/logo-1-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="assets/images/logo-2-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="assets/images/logo-3-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="assets/images/logo-4-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="assets/images/logo-5-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="assets/images/logo-6-color.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
             </div>
 
-            <div class="experience-item">
-                <div class="experience-header">
-                    <img class="company-logo" src="assets/sirius-media.svg" alt="Sirius Media B.V. logo" loading="lazy">
-                    <div>
-                        <h3>DevOps Engineer</h3>
-                        <p class="company">Sirius Media B.V. · Contract — Amsterdam, North Holland, Netherlands · Hybrid</p>
-                        <p class="duration">Jun 2022 — May 2023 · 1 yr</p>
-                    </div>
-                </div>
-                <ul>
-                    <li>Managed daily operations, monitoring, and deployments to ensure system reliability.</li>
-                    <li>Led 24/7 incident handling and resolution, enhancing team responsiveness.</li>
-                    <li>Implemented CI/CD using JetBrains TeamCity to fully automate deployments.</li>
-                    <li>Optimized cloud infrastructure by setting up GKE and EKS clusters, cutting costs up to 40%.</li>
-                </ul>
-                <p class="skills">Skills: CI/CD · Kubernetes · Microsoft Azure · Google Cloud Platform (GCP) · Amazon Web Services (AWS)</p>
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">University school of the arts</h4>
+
+              <span>2007 — 2008</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">New york academy of art</h4>
+
+              <span>2006 — 2007</span>
+
+              <p class="timeline-text">
+                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
+                omnis..
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">High school of art and design</h4>
+
+              <span>2002 — 2004</span>
+
+              <p class="timeline-text">
+                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
+                magni dolores
+                eos.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
             </div>
 
-            <div class="experience-item">
-                <div class="experience-header">
-                    <img class="company-logo" src="assets/payconiq.svg" alt="Payconiq logo" loading="lazy">
-                    <div>
-                        <h3>SRE-Ops</h3>
-                        <p class="company">Payconiq · Permanent — Amsterdam Area, Netherlands · Hybrid</p>
-                        <p class="duration">Jan 2019 — May 2022 · 3 yrs 5 mos</p>
-                    </div>
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Creative director</h4>
+
+              <span>2015 — Present</span>
+
+              <p class="timeline-text">
+                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
+                molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Art director</h4>
+
+              <span>2013 — 2015</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Web designer</h4>
+
+              <span>2010 — 2013</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web design</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Graphic design</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Branding</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">WordPress</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Finance</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Orizon</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Fundo</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Brawlhalla</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+
+                  <p class="blog-text">
+                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                  </p>
+
                 </div>
-                <ul>
-                    <li>Provisioned and managed public/private cloud infra using AWS, Azure, and GCP.</li>
-                    <li>Monitored performance with Grafana, Prometheus, and New Relic to ensure uptime.</li>
-                    <li>Coordinated across squads and support to meet SLA for bug-fixing.</li>
-                    <li>Ran incident management with reports and postmortems to drive improvements.</li>
-                </ul>
-                <p class="skills">Skills: CI/CD · Kubernetes · Microsoft Azure · Amazon Web Services (AWS)</p>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+
+                  <p class="blog-text">
+                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #80</h3>
+
+                  <p class="blog-text">
+                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
+
+                  <p class="blog-text">
+                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+
+                  <p class="blog-text">
+                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #79</h3>
+
+                  <p class="blog-text">
+                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
             </div>
 
-            <div class="experience-item">
-                <div class="experience-header">
-                    <img class="company-logo" src="assets/ufone.svg" alt="Ufone logo" loading="lazy">
-                    <div>
-                        <h3>Executive RF Planning & Optimization</h3>
-                        <p class="company">Ufone — On-site · Ufone Tower, Islamabad</p>
-                        <p class="duration">Aug 2017 — Sep 2018 · 1 yr 2 mos</p>
-                    </div>
-                </div>
-                <ul>
-                    <li>Planned and optimized 2G/3G/4G networks; managed databases.</li>
-                    <li>Used MapInfo and Atoll for predictive analysis to improve coverage.</li>
-                    <li>Prepared presentations for senior management; maintained current data for decisions.</li>
-                    <li>Resolved signal strength complaints to improve user satisfaction.</li>
-                </ul>
-            </div>
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
-            <div class="experience-item">
-                <div class="experience-header">
-                    <img class="company-logo" src="assets/ufone.svg" alt="Ufone logo" loading="lazy">
-                    <div>
-                        <h3>Resident Engineer IT</h3>
-                        <p class="company">Ufone — On-site · I-9/2, Islamabad</p>
-                        <p class="duration">Sep 2015 — Jul 2017 · 1 yr 11 mos</p>
-                    </div>
-                </div>
-                <ul>
-                    <li>Managed IT mediation using Huawei TopEng on Red Hat Linux servers.</li>
-                    <li>Configured SSH, FTP, DNS and other services to enhance functionality.</li>
-                    <li>Performed traffic analysis with Wireshark and tcpdump to optimize security and performance.</li>
-                </ul>
-            </div>
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
 
-            <div class="experience-item">
-                <div class="experience-header">
-                    <img class="company-logo" src="assets/ibex.svg" alt="Ibex Group of Companies logo" loading="lazy">
-                    <div>
-                        <h3>Research and Development Engineer</h3>
-                        <p class="company">Ibex Group of Companies · Contract — Islamabad · On-site</p>
-                        <p class="duration">Jan 2015 — Aug 2015 · 8 mos</p>
-                    </div>
-                </div>
-                <ul>
-                    <li>Led R&D projects (Umall.pk, Asterisk Audio Streaming) to improve delivery and performance.</li>
-                    <li>Installed/configured OS and services across multiple server platforms.</li>
-                    <li>Developed monitoring for DDoS and network services across countries, strengthening security.</li>
-                </ul>
-            </div>
+          </form>
 
-            <div class="experience-item">
-                <div class="experience-header">
-                    <img class="company-logo" src="assets/witribe.svg" alt="wi-tribe Pakistan logo" loading="lazy">
-                    <div>
-                        <h3>Technical Support Engineer</h3>
-                        <p class="company">wi-tribe Pakistan · Contract — Islamabad · On-site</p>
-                        <p class="duration">Sep 2014 — Jan 2015 · 5 mos</p>
-                    </div>
-                </div>
-                <ul>
-                    <li>Resolved customer issues via phone and email; created and escalated incidents.</li>
-                    <li>Managed operational tasks within SLAs and met KPIs.</li>
-                    <li>Contributed to a dynamic startup environment and customer satisfaction.</li>
-                </ul>
-            </div>
+        </section>
 
-            <div class="experience-item">
-                <div class="experience-header">
-                    <img class="company-logo" src="assets/pta.svg" alt="Pakistan Telecommunication Authority (PTA) logo" loading="lazy">
-                    <div>
-                        <h3>IT Support Engineer</h3>
-                        <p class="company">Pakistan Telecommunication Authority (PTA) · Contract — Islamabad · On-site</p>
-                        <p class="duration">Jun 2014 — Aug 2014 · 3 mos</p>
-                    </div>
-                </div>
-                <ul>
-                    <li>Collaborated with the IP Blocking Team to track/block illegal telephone exchanges.</li>
-                    <li>Provided customer support; ensured timely resolutions and escalations.</li>
-                    <li>Worked under third-party contract to enhance operational efficiency.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+      </article>
 
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Cloud Platforms</h3>
-                    <ul>
-                        <li>Azure</li>
-                        <li>AWS</li>
-                        <li>Google Cloud</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>DevOps Tools</h3>
-                    <ul>
-                        <li>Azure DevOps</li>
-                        <li>Docker</li>
-                        <li>Kubernetes</li>
-                        <li>Ansible</li>
-                        <li>Terraform</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Programming</h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>Bash</li>
-                        <li>SQL</li>
-                        <li>YAML</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Databases</h3>
-                    <ul>
-                        <li>Oracle</li>
-                        <li>PostgreSQL</li>
-                        <li>MongoDB</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
-    <section id="featured" aria-label="Featured">
-        <div class="container">
-            <h2>Featured</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Azure DevOps CI/CD</h3>
-                    <p>End-to-end pipelines with approvals, gates, environments, and security.</p>
-                    <div class="tags">
-                        <span>Azure DevOps</span>
-                        <span>GitHub Actions</span>
-                        <span>Kubernetes</span>
-                    </div>
-                    <div class="actions">
-                        <a class="btn small" href="#" aria-label="View details">Details</a>
-                        <a class="btn small secondary" href="https://www.linkedin.com/in/waqar-eu/" target="_blank" rel="noopener">On LinkedIn</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>Cloud Infra as Code</h3>
-                    <p>Modular Terraform stacks for Azure/AWS with policy and secrets.</p>
-                    <div class="tags">
-                        <span>Terraform</span>
-                        <span>Azure</span>
-                        <span>Ansible</span>
-                    </div>
-                    <div class="actions">
-                        <a class="btn small" href="#" aria-label="View details">Details</a>
-                        <a class="btn small secondary" href="https://github.com/waqarhu" target="_blank" rel="noopener">Code</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  </main>
 
-    <section id="projects" aria-label="Highlighted Projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Automated Deployment Pipeline</h3>
-                    <p>Built comprehensive CI/CD pipeline using Azure DevOps for enterprise applications</p>
-                    <div class="tags">
-                        <span>Azure DevOps</span>
-                        <span>Ansible</span>
-                        <span>Python</span>
-                    </div>
-                    <div class="actions">
-                        <a class="btn small" href="#" aria-label="Read case study">Case Study</a>
-                        <a class="btn small secondary" href="https://github.com/waqarhu" target="_blank" rel="noopener">Code</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>Infrastructure Automation</h3>
-                    <p>Automated infrastructure provisioning and configuration management</p>
-                    <div class="tags">
-                        <span>Terraform</span>
-                        <span>Ansible</span>
-                        <span>Azure</span>
-                    </div>
-                    <div class="actions">
-                        <a class="btn small" href="#" aria-label="Read case study">Case Study</a>
-                        <a class="btn small secondary" href="https://github.com/waqarhu" target="_blank" rel="noopener">Code</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="certifications" aria-label="Certifications">
-        <div class="container">
-            <h2>Certifications</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Cloud & DevOps</h3>
-                    <ul>
-                        <li>Microsoft Certified: Azure Administrator Associate (AZ-104)</li>
-                        <li>Microsoft Certified: Azure Solutions Architect Expert (AZ-305)</li>
-                        <li>HashiCorp Certified: Terraform Associate</li>
-                        <li>CKA/CKAD (Kubernetes) — add exact credential if applicable</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Other</h3>
-                    <ul>
-                        <li>AWS Certified (e.g., SAA-C03) — if applicable</li>
-                        <li>DevOps Foundations / Security — if applicable</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="contact" aria-label="Contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p>Email: <a href="mailto:contact@waqar.eu">contact@waqar.eu</a></p>
-            <p>GitHub: <a href="https://github.com/waqarhu" target="_blank" rel="noopener">github.com/waqarhu</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/waqar-eu/" target="_blank" rel="noopener">linkedin.com/in/waqar-eu</a></p>
-        </div>
-    </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Waqar Hussain. All rights reserved.</p>
-        </div>
-    </footer>
-    </main>
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>
