@@ -108,6 +108,7 @@ section h2::after {
 
 .experience-header { display: flex; gap: 0.75rem; align-items: center; }
 .company-logo { width: 40px; height: 40px; object-fit: contain; border-radius: 8px; background: #fff; padding: 4px; }
+.experience-item .skills { margin-top: 0.5rem; color: var(--muted); font-size: 0.9rem; }
 
 /* Skills */
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
