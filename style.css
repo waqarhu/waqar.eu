@@ -1,17 +1,18 @@
 :root {
-    --bg: #0f172a; /* slate-900 */
-    --surface: #111827; /* gray-900 */
-    --text: #e5e7eb; /* gray-200 */
-    --muted: #94a3b8; /* slate-400 */
-    --primary: #7c3aed; /* violet-600 */
-    --primary-700: #6d28d9;
-    --accent: #22d3ee; /* cyan-400 */
-    --accent-500: #06b6d4;
-    --success: #10b981; /* emerald-500 */
-    --warn: #f59e0b; /* amber-500 */
-    --danger: #ef4444; /* red-500 */
-    --card: rgba(255,255,255,0.06);
-    --card-border: rgba(255,255,255,0.12);
+    /* vCard-style dark theme with teal & lime accents */
+    --bg: #121212;          /* deep dark */
+    --surface: #1e1e1e;     /* surface panels */
+    --text: #e0e0e0;        /* primary text */
+    --muted: #a0a0a0;       /* secondary text */
+    --primary: #14b8a6;     /* teal 500 */
+    --primary-700: #0d9488; /* teal 600 */
+    --accent: #a3e635;      /* lime 400 */
+    --accent-500: #84cc16;  /* lime 500 */
+    --success: #22c55e;     /* green 500 */
+    --warn: #f59e0b;        /* amber 500 */
+    --danger: #ef4444;      /* red 500 */
+    --card: rgba(255,255,255,0.05);
+    --card-border: rgba(255,255,255,0.1);
 }
 
 html, body {
@@ -34,7 +35,7 @@ header nav {
     top: 0;
     z-index: 20;
     backdrop-filter: saturate(120%) blur(8px);
-    background: linear-gradient(180deg, rgba(17,24,39,0.85), rgba(17,24,39,0.65));
+    background: linear-gradient(180deg, rgba(30,30,30,0.85), rgba(30,30,30,0.65));
     border-bottom: 1px solid var(--card-border);
 }
 header nav .container {
@@ -72,9 +73,9 @@ header a:hover::after { width: 100%; }
 
 /* Hero */
 #hero {
-    background: radial-gradient(1200px 500px at 20% 0%, rgba(124,58,237,0.25), transparent),
-                            radial-gradient(1200px 500px at 80% 10%, rgba(34,211,238,0.25), transparent),
-                            linear-gradient(180deg, rgba(17,24,39,0.4), rgba(17,24,39,0));
+    background: radial-gradient(1000px 420px at 20% 0%, rgba(20,184,166,0.20), transparent),
+                            radial-gradient(900px 380px at 80% 10%, rgba(163,230,53,0.18), transparent),
+                            linear-gradient(180deg, rgba(18,18,18,0.5), rgba(18,18,18,0));
     padding: 6rem 0 4rem;
     text-align: center;
 }
@@ -84,9 +85,9 @@ header a:hover::after { width: 100%; }
 
 /* Buttons */
 .btn { display: inline-block; border-radius: 999px; padding: 0.6rem 1rem; font-weight: 600; transition: all 150ms ease; }
-.btn.primary { background: var(--primary); color: white; box-shadow: 0 8px 18px rgba(124,58,237,0.25); }
-.btn.primary:hover { background: var(--primary-700); transform: translateY(-1px); }
-.btn.secondary { background: var(--accent); color: #031016; box-shadow: 0 8px 18px rgba(34,211,238,0.3); }
+.btn.primary { background: var(--primary); color: #032221; box-shadow: 0 8px 18px rgba(20,184,166,0.2); }
+.btn.primary:hover { background: var(--primary-700); color: #eafffb; transform: translateY(-1px); }
+.btn.secondary { background: var(--accent); color: #0a1902; box-shadow: 0 8px 18px rgba(163,230,53,0.25); }
 .btn.secondary:hover { background: var(--accent-500); transform: translateY(-1px); }
 .btn.ghost { border: 1px solid var(--card-border); color: var(--text); }
 .btn.ghost:hover { border-color: var(--accent); color: var(--accent); }
@@ -121,7 +122,7 @@ section h2::after {
 .project-card { background: var(--card); border: 1px solid var(--card-border); border-radius: 12px; padding: 1rem; }
 .project-card h3 { margin-top: 0; }
 .project-card .tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem; }
-.project-card .tags span { background: rgba(34,211,238,0.15); color: var(--accent); border: 1px solid rgba(34,211,238,0.35); padding: 0.2rem 0.5rem; border-radius: 999px; font-size: 0.85rem; }
+.project-card .tags span { background: rgba(20,184,166,0.12); color: var(--primary); border: 1px solid rgba(20,184,166,0.35); padding: 0.2rem 0.5rem; border-radius: 999px; font-size: 0.85rem; }
 .project-card .actions { display: flex; gap: 0.5rem; margin-top: 0.75rem; }
 
 /* Contact */
@@ -129,7 +130,7 @@ section h2::after {
 #contact a:hover { color: var(--accent-500); }
 
 /* Footer */
-footer { background: linear-gradient(180deg, rgba(17,24,39,0.6), rgba(17,24,39,0.9)); border-top: 1px solid var(--card-border); }
+footer { background: linear-gradient(180deg, rgba(30,30,30,0.6), rgba(18,18,18,0.92)); border-top: 1px solid var(--card-border); }
 footer .container { padding: 1.25rem 0; text-align: center; color: var(--muted); }
 
 /* Responsive tweaks */
