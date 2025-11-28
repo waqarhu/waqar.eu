@@ -85,9 +85,15 @@
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
   <!--
-    - custom css link
+    - preload critical resources
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preload" href="./assets/css/style.min.css" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" as="style">
+  
+  <!--
+    - custom css link (minified for production)
+  -->
+  <link rel="stylesheet" href="./assets/css/style.min.css">
 
   <!--
     - google font link
@@ -1358,15 +1364,10 @@
 
   </main>
 
-
-
-
-
-
   <!--
-    - custom js link
+    - custom js link (minified for production)
   -->
-  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script.min.js" defer></script>
 
   <!--
     - ionicon link
