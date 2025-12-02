@@ -1,5 +1,5 @@
 // Service Worker for waqar.eu
-const CACHE_NAME = 'waqar-portfolio-v1';
+const CACHE_NAME = 'waqar-portfolio-v2';
 const urlsToCache = [
   '/',
   '/index.html',

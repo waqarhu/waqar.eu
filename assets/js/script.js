@@ -44,8 +44,8 @@ const testimonialsModalFunc = function () {
 
 // add click event to all modal items
 if (testimonialsItem.length > 0 && modalImg && modalTitle && modalText) {
-  for (let i = 0; i < testimonialsItem.length; i++) {
-    testimonialsItem[i].addEventListener("click", function () {
+  testimonialsItem.forEach(item => {
+    item.addEventListener("click", function () {
       try {
         const avatar = this.querySelector("[data-testimonials-avatar]");
         const title = this.querySelector("[data-testimonials-title]");
@@ -71,7 +71,7 @@ if (testimonialsItem.length > 0 && modalImg && modalTitle && modalText) {
         console.error('Error opening testimonial modal:', error);
       }
     });
-  }
+  });
 }
 
 // add click event to modal close button
@@ -96,41 +96,37 @@ if (select) {
 
 // add event in all select items
 if (selectItems.length > 0 && selectValue) {
-  for (let i = 0; i < selectItems.length; i++) {
-    selectItems[i].addEventListener("click", function () {
+  selectItems.forEach(item => {
+    item.addEventListener("click", function () {
       const selectedValue = this.innerText.toLowerCase();
       selectValue.innerText = this.innerText;
       elementToggleFunc(select);
       filterFunc(selectedValue);
     });
-  }
+  });
 }
 
 // filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
 const filterFunc = function (selectedValue) {
-
-  for (let i = 0; i < filterItems.length; i++) {
-
+  filterItems.forEach(item => {
     if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
+      item.classList.add("active");
+    } else if (selectedValue === item.dataset.category) {
+      item.classList.add("active");
     } else {
-      filterItems[i].classList.remove("active");
+      item.classList.remove("active");
     }
-
-  }
-
+  });
 }
 
 // add event in all filter button items for large screen
 if (filterBtn.length > 0) {
   let lastClickedBtn = filterBtn[0];
 
-  for (let i = 0; i < filterBtn.length; i++) {
-    filterBtn[i].addEventListener("click", function () {
+  filterBtn.forEach(btn => {
+    btn.addEventListener("click", function () {
       const selectedValue = this.innerText.toLowerCase();
       if (selectValue) {
         selectValue.innerText = this.innerText;
@@ -143,7 +139,7 @@ if (filterBtn.length > 0) {
       this.classList.add("active");
       lastClickedBtn = this;
     });
-  }
+  });
 }
 
 
@@ -155,8 +151,8 @@ const formBtn = document.querySelector("[data-form-btn]");
 
 // add event to all form input field
 if (form && formInputs.length > 0 && formBtn) {
-  for (let i = 0; i < formInputs.length; i++) {
-    formInputs[i].addEventListener("input", function () {
+  formInputs.forEach(input => {
+    input.addEventListener("input", function () {
       // check form validation
       if (form.checkValidity()) {
         formBtn.removeAttribute("disabled");
@@ -164,7 +160,7 @@ if (form && formInputs.length > 0 && formBtn) {
         formBtn.setAttribute("disabled", "");
       }
     });
-  }
+  });
 
   // Form submission handler with loading state
   form.addEventListener("submit", function(e) {
@@ -183,21 +179,31 @@ const pages = document.querySelectorAll("[data-page]");
 
 // add event to all nav link
 if (navigationLinks.length > 0 && pages.length > 0) {
-  for (let i = 0; i < navigationLinks.length; i++) {
-    navigationLinks[i].addEventListener("click", function () {
-      for (let i = 0; i < pages.length; i++) {
-        if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-          pages[i].classList.add("active");
-          navigationLinks[i].classList.add("active");
+  navigationLinks.forEach((link, index) => {
+    link.addEventListener("click", function () {
+      const targetPage = this.innerHTML.toLowerCase();
+      pages.forEach((page, pageIndex) => {
+        if (targetPage === page.dataset.page) {
+          page.classList.add("active");
+          navigationLinks[pageIndex].classList.add("active");
           window.scrollTo(0, 0);
         } else {
-          pages[i].classList.remove("active");
-          navigationLinks[i].classList.remove("active");
+          page.classList.remove("active");
+          navigationLinks[pageIndex].classList.remove("active");
         }
-      }
+      });
     });
-  }
+  });
 }
+
+// Global error handler
+window.addEventListener('error', function(e) {
+  console.error('Global error:', e.error);
+});
+
+window.addEventListener('unhandledrejection', function(e) {
+  console.error('Unhandled promise rejection:', e.reason);
+});
 
 // Theme toggle functionality
 const themeToggle = document.querySelector("[data-theme-toggle]");
