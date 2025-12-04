@@ -55,6 +55,109 @@ function shuffleTestimonials() {
 // Start testimonials shuffle (every 30 seconds)
 setInterval(shuffleTestimonials, 30000);
 
+// 99 Names of Allah (Asma ul Husna)
+const namesOfAllah = [
+  "Ar-Rahman - The Most Merciful",
+  "Ar-Raheem - The Bestower of Mercy",
+  "Al-Malik - The King",
+  "Al-Quddus - The Most Holy",
+  "As-Salam - The Source of Peace",
+  "Al-Mu'min - The Granter of Security",
+  "Al-Muhaymin - The Guardian",
+  "Al-Aziz - The Almighty",
+  "Al-Jabbar - The Compeller",
+  "Al-Mutakabbir - The Supreme",
+  "Al-Khaliq - The Creator",
+  "Al-Bari - The Evolver",
+  "Al-Musawwir - The Fashioner",
+  "Al-Ghaffar - The Repeatedly Forgiving",
+  "Al-Qahhar - The Subduer",
+  "Al-Wahhab - The Bestower",
+  "Ar-Razzaq - The Provider",
+  "Al-Fattah - The Opener",
+  "Al-Alim - The All-Knowing",
+  "Al-Qabid - The Withholder",
+  "Al-Basit - The Extender",
+  "Al-Khafid - The Reducer",
+  "Ar-Rafi - The Exalter",
+  "Al-Mu'izz - The Honorer",
+  "Al-Mudhill - The Humiliator",
+  "As-Sami - The All-Hearing",
+  "Al-Basir - The All-Seeing",
+  "Al-Hakam - The Judge",
+  "Al-Adl - The Just",
+  "Al-Latif - The Subtle",
+  "Al-Khabir - The Aware",
+  "Al-Halim - The Forbearing",
+  "Al-Azim - The Magnificent",
+  "Al-Ghafur - The Forgiving",
+  "Ash-Shakur - The Appreciative",
+  "Al-Ali - The Most High",
+  "Al-Kabir - The Greatest",
+  "Al-Hafiz - The Preserver",
+  "Al-Muqit - The Sustainer",
+  "Al-Hasib - The Reckoner",
+  "Al-Jalil - The Majestic",
+  "Al-Karim - The Generous",
+  "Ar-Raqib - The Watchful",
+  "Al-Mujib - The Responsive",
+  "Al-Wasi - The All-Encompassing",
+  "Al-Hakim - The Wise",
+  "Al-Wadud - The Loving",
+  "Al-Majid - The Glorious",
+  "Al-Ba'ith - The Resurrector",
+  "Ash-Shahid - The Witness",
+  "Al-Haqq - The Truth",
+  "Al-Wakil - The Trustee",
+  "Al-Qawi - The Strong",
+  "Al-Matin - The Firm",
+  "Al-Wali - The Protecting Friend",
+  "Al-Hamid - The Praiseworthy",
+  "Al-Muhsi - The Reckoner",
+  "Al-Mubdi - The Originator",
+  "Al-Mu'id - The Restorer",
+  "Al-Muhyi - The Giver of Life",
+  "Al-Mumit - The Destroyer",
+  "Al-Hayy - The Ever-Living",
+  "Al-Qayyum - The Self-Sustaining",
+  "Al-Wajid - The Finder",
+  "Al-Majid - The Noble",
+  "Al-Wahid - The Unique",
+  "Al-Ahad - The One",
+  "As-Samad - The Eternal",
+  "Al-Qadir - The Capable",
+  "Al-Muqtadir - The Powerful",
+  "Al-Muqaddim - The Expediter",
+  "Al-Mu'akhkhir - The Delayer",
+  "Al-Awwal - The First",
+  "Al-Akhir - The Last",
+  "Az-Zahir - The Manifest",
+  "Al-Batin - The Hidden",
+  "Al-Wali - The Governor",
+  "Al-Muta'ali - The Most Exalted",
+  "Al-Barr - The Source of Goodness",
+  "At-Tawwab - The Acceptor of Repentance",
+  "Al-Muntaqim - The Avenger",
+  "Al-Afuw - The Pardoner",
+  "Ar-Ra'uf - The Compassionate",
+  "Malik-ul-Mulk - The Owner of Sovereignty",
+  "Dhul-Jalali-wal-Ikram - The Lord of Majesty and Bounty",
+  "Al-Muqsit - The Equitable",
+  "Al-Jami - The Gatherer",
+  "Al-Ghani - The Self-Sufficient",
+  "Al-Mughni - The Enricher",
+  "Al-Mani - The Preventer",
+  "Ad-Darr - The Distresser",
+  "An-Nafi - The Propitious",
+  "An-Nur - The Light",
+  "Al-Hadi - The Guide",
+  "Al-Badi - The Incomparable",
+  "Al-Baqi - The Everlasting",
+  "Al-Warith - The Inheritor",
+  "Ar-Rashid - The Guide to the Right Path",
+  "As-Sabur - The Patient"
+];
+
 // Islamic Quotes (Quran & Hadith)
 const islamicQuotes = [
   "Indeed, with hardship comes ease.",
@@ -139,6 +242,16 @@ const islamicQuotes = [
   "The best day on which the sun has risen is Friday."
 ];
 
+let currentNameIndex = 0;
+
+function displayNameOfAllah() {
+  const nameElement = document.querySelector('.allah-name');
+  if (nameElement) {
+    nameElement.textContent = namesOfAllah[currentNameIndex];
+    currentNameIndex = (currentNameIndex + 1) % namesOfAllah.length;
+  }
+}
+
 function displayIslamicQuote() {
   const quoteText = document.querySelector('.quote-text');
   const quoteAuthor = document.querySelector('.quote-author');
@@ -153,8 +266,12 @@ function displayIslamicQuote() {
   }
 }
 
-// Display quote on page load
+// Display on page load
+displayNameOfAllah();
 displayIslamicQuote();
+
+// Change name of Allah every 5 seconds
+setInterval(displayNameOfAllah, 5000);
 
 // Change quote every 2 minutes (120 seconds)
 setInterval(displayIslamicQuote, 120000);
