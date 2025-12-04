@@ -27,6 +27,34 @@ if (avatarImages.length > 1) {
   setInterval(rotateAvatar, 10000); // Change image every 10 seconds
 }
 
+// Testimonials shuffle function
+function shuffleTestimonials() {
+  const testimonialsList = document.querySelector('.testimonials-list');
+  if (!testimonialsList) return;
+  
+  const items = Array.from(testimonialsList.children);
+  if (items.length <= 1) return;
+  
+  // Fisher-Yates shuffle algorithm
+  for (let i = items.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [items[i], items[j]] = [items[j], items[i]];
+  }
+  
+  // Fade out effect
+  testimonialsList.style.opacity = '0';
+  
+  setTimeout(() => {
+    // Reorder the DOM elements
+    items.forEach(item => testimonialsList.appendChild(item));
+    // Fade in effect
+    testimonialsList.style.opacity = '1';
+  }, 500);
+}
+
+// Start testimonials shuffle (every 30 seconds)
+setInterval(shuffleTestimonials, 30000);
+
 // Utility functions
 const elementToggleFunc = function (elem) { 
   if (elem) elem.classList.toggle("active"); 

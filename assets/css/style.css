@@ -723,6 +723,7 @@ main {
   scroll-behavior: smooth;
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .testimonials-item {
