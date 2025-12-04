@@ -1022,8 +1022,8 @@ main {
 .devicon-redhat-plain:hover,
 .devicon-github-original:hover,
 .devicon-git-plain:hover {
-  transform: scale(1.3) translateY(-5px);
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+  transform: scale(1.5) translateY(-10px);
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.4));
   cursor: pointer;
 }
 
