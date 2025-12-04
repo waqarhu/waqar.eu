@@ -227,3 +227,22 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 if (prefersReducedMotion.matches) {
   html.classList.add('reduce-motion');
 }
+
+// Calculate years of experience from 2015
+const calculateYearsOfExperience = function() {
+  const startYear = 2015;
+  const currentYear = new Date().getFullYear();
+  return currentYear - startYear;
+};
+
+// Update years of experience dynamically
+document.addEventListener('DOMContentLoaded', function() {
+  const yearsOfExperience = calculateYearsOfExperience();
+  const experienceElements = document.querySelectorAll('[data-years-experience]');
+  
+  experienceElements.forEach(element => {
+    const text = element.textContent || element.innerText;
+    const updatedText = text.replace(/\d+\+?/, yearsOfExperience + '+');
+    element.textContent = updatedText;
+  });
+});
