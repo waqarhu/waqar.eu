@@ -25,7 +25,7 @@ function rotateAvatar() {
 
 // Start rotation if multiple images exist
 if (avatarImages.length > 1) {
-  setInterval(rotateAvatar, 5000); // Change image every 5 seconds
+  setInterval(rotateAvatar, 60000); // Change image every 60 seconds (1 minute)
 }
 
 // Utility functions
