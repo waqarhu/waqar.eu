@@ -298,3 +298,20 @@ document.addEventListener('DOMContentLoaded', function() {
     element.textContent = updatedText;
   });
 });
+
+// Register service worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js')
+      .then(reg => {
+        if (process.env.NODE_ENV === 'development') {
+          console.log('Service Worker registered:', reg);
+        }
+      })
+      .catch(err => {
+        if (process.env.NODE_ENV === 'development') {
+          console.error('Service Worker registration failed:', err);
+        }
+      });
+  });
+}

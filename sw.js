@@ -1,5 +1,7 @@
 // Service Worker for waqar.eu
-const CACHE_NAME = 'waqar-portfolio-v3';
+const CACHE_NAME = 'waqar-portfolio-v4';
+const DEBUG = false; // Set to true for development debugging
+
 const urlsToCache = [
   '/',
   '/index.html',
@@ -21,10 +23,12 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
-        console.log('Opened cache');
+        if (DEBUG) console.log('Opened cache');
         return cache.addAll(urlsToCache);
       })
-      .catch(err => console.log('Cache install failed:', err))
+      .catch(err => {
+        if (DEBUG) console.error('Cache install failed:', err);
+      })
   );
   self.skipWaiting();
 });
@@ -59,7 +63,7 @@ self.addEventListener('fetch', event => {
         );
       })
       .catch(err => {
-        console.log('Fetch failed:', err);
+        if (DEBUG) console.error('Fetch failed:', err);
         // You could return a custom offline page here
       })
   );
