@@ -1,5 +1,33 @@
 'use strict';
 
+// Avatar rotation
+const avatarImages = [
+  './assets/images/my-avatar.png',
+  './assets/images/my-avatar-2.png',
+  './assets/images/my-avatar-3.png'
+  // Add more image paths here
+];
+
+let currentAvatarIndex = 0;
+const avatarElement = document.getElementById('profile-avatar');
+
+function rotateAvatar() {
+  if (avatarImages.length > 1 && avatarElement) {
+    currentAvatarIndex = (currentAvatarIndex + 1) % avatarImages.length;
+    avatarElement.style.opacity = '0';
+    
+    setTimeout(() => {
+      avatarElement.src = avatarImages[currentAvatarIndex];
+      avatarElement.style.opacity = '1';
+    }, 300);
+  }
+}
+
+// Start rotation if multiple images exist
+if (avatarImages.length > 1) {
+  setInterval(rotateAvatar, 5000); // Change image every 5 seconds
+}
+
 // Utility functions
 const elementToggleFunc = function (elem) { 
   if (elem) elem.classList.toggle("active"); 
