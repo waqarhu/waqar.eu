@@ -181,7 +181,8 @@ const pages = document.querySelectorAll("[data-page]");
 if (navigationLinks.length > 0 && pages.length > 0) {
   navigationLinks.forEach((link, index) => {
     link.addEventListener("click", function () {
-      const targetPage = this.innerHTML.toLowerCase();
+      // Check for data-page-target attribute first, then fall back to innerHTML
+      const targetPage = this.getAttribute('data-page-target') || this.innerHTML.toLowerCase();
       pages.forEach((page, pageIndex) => {
         if (targetPage === page.dataset.page) {
           page.classList.add("active");
