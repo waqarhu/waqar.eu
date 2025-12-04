@@ -247,7 +247,9 @@ let currentNameIndex = 0;
 function displayNameOfAllah() {
   const nameElement = document.querySelector('.allah-name');
   if (nameElement) {
-    nameElement.textContent = namesOfAllah[currentNameIndex];
+    const fullName = namesOfAllah[currentNameIndex];
+    const [arabicName, meaning] = fullName.split(' - ');
+    nameElement.innerHTML = `<strong>${arabicName}</strong><br>${meaning}`;
     currentNameIndex = (currentNameIndex + 1) % namesOfAllah.length;
   }
 }
