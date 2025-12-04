@@ -270,8 +270,8 @@ function displayIslamicQuote() {
 displayNameOfAllah();
 displayIslamicQuote();
 
-// Change name of Allah every 5 seconds
-setInterval(displayNameOfAllah, 5000);
+// Change name of Allah every 2 seconds
+setInterval(displayNameOfAllah, 2000);
 
 // Change quote every 2 minutes (120 seconds)
 setInterval(displayIslamicQuote, 120000);
