@@ -16,19 +16,20 @@
 
 ## 📋 About
 
-A modern, high-performance portfolio website showcasing DevOps engineering expertise, cloud infrastructure projects, and CI/CD automation. Built with vanilla HTML, CSS, and JavaScript, this site demonstrates best practices in web performance, security, and accessibility.
+A modern, high-performance portfolio website showcasing Senior DevOps/Platform Engineering expertise, cloud infrastructure projects, and CI/CD automation. Built with vanilla HTML, CSS, and JavaScript, this site demonstrates best practices in web performance, security, and accessibility.
 
 ### ✨ Key Features
 
 - 🎨 **Fully Responsive Design** - Optimized for all devices and screen sizes
-- ⚡ **Lightning Fast** - WebP images, minified assets, service worker caching
+- ⚡ **Lightning Fast** - WebP images, resource hints, service worker caching
 - 🔒 **Security Hardened** - CSP, XSS protection, secure headers
 - 📱 **PWA Ready** - Installable on iOS, Android, and desktop platforms
-- ♿ **Accessible** - WCAG 2.1 compliant with semantic HTML
+- ♿ **Accessible** - WCAG 2.1 compliant with ARIA labels and semantic HTML
 - 🌙 **Dark/Light Theme** - Persistent theme preference with smooth transitions
-- 📊 **SEO Optimized** - Schema.org structured data, Open Graph, sitemap
-- 📧 **Working Contact Form** - Integrated with Formspree for reliable message delivery
+- 📊 **SEO Optimized** - Schema.org structured data, FAQ schema, Open Graph, sitemap
+- 📧 **Working Contact Form** - Async form submission with real-time feedback
 - 🎯 **Custom 404 Page** - Branded error page with navigation
+- 🖼️ **Google Images Ready** - Optimized metadata for image search indexing
 
 ## 🎬 Demo
 
@@ -52,8 +53,10 @@ A modern, high-performance portfolio website showcasing DevOps engineering exper
 ### Performance Optimizations
 - **WebP Images** - 44% smaller file sizes compared to JPEG/PNG
 - **Minified Assets** - Clean-CSS and Terser for CSS/JS compression
-- **Service Worker** - Offline-first caching strategy
+- **Service Worker** - Offline-first caching strategy (v4)
+- **Resource Hints** - fetchpriority, modulepreload, preload for critical assets
 - **Lazy Loading** - Progressive image loading
+- **Noscript Fallback** - Graceful degradation for non-JS users
 
 ### Security Features
 - **Content Security Policy (CSP)** - XSS and injection protection
@@ -61,10 +64,11 @@ A modern, high-performance portfolio website showcasing DevOps engineering exper
 - **HTTPS Only** - Secure connections enforced
 
 ### SEO & Metadata
-- **Open Graph** - Rich social media previews
-- **Schema.org** - Person, ImageObject, BreadcrumbList structured data
-- **XML Sitemap** - Search engine indexing
-- **Robots.txt** - Crawl optimization
+- **Open Graph** - Rich social media previews with og:site_name
+- **Schema.org** - Person, ImageObject, BreadcrumbList, FAQPage structured data
+- **FAQ Schema** - 6 structured Q&A pairs for rich snippets
+- **XML Sitemap** - Enhanced with image metadata (geo_location, license)
+- **Robots.txt** - Googlebot-Image specific optimizations
 
 ## 🚀 Getting Started
 
@@ -143,9 +147,11 @@ waqar.eu/
 
 ### Dynamic Content
 - Automatic experience years calculation (2015 → current year)
-- Theme persistence across sessions
-- Smooth page transitions
+- Theme persistence across sessions with localStorage
+- Smooth page transitions with CSS animations
 - Interactive project filtering
+- Async form submission with visual feedback (success/error messages)
+- ARIA live regions for accessibility announcements
 
 ### Contact Form
 - Async form submission with Fetch API
@@ -170,10 +176,12 @@ waqar.eu/
 ## 📈 Performance Metrics
 
 - **Lighthouse Score**: 95+ across all categories
-- **Image Optimization**: 44% size reduction with WebP
+- **Image Optimization**: 44% size reduction (2072K → 1156K) with WebP
+- **Codebase Cleanup**: 1.8MB saved by removing legacy images
 - **First Contentful Paint**: < 1.5s
 - **Time to Interactive**: < 3.5s
 - **Total Blocking Time**: < 300ms
+- **Service Worker Cache**: v4 with offline-first strategy
 
 ## 📧 Contact
 
@@ -192,9 +200,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - Design inspiration from modern portfolio trends
-- WebP conversion optimization techniques
-- Service Worker implementation patterns
+- WebP conversion optimization with cwebp 1.3.2
+- Service Worker implementation patterns (cache-first strategy)
 - Accessibility best practices from WCAG guidelines
+- Schema.org structured data specifications
+- Google Search Console optimization recommendations
 
 ---
 
