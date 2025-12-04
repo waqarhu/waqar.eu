@@ -646,6 +646,7 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  text-align: justify;
 }
 
 .about-text p { margin-bottom: 15px; }
@@ -697,6 +698,7 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-3);
   line-height: 1.6;
+  text-align: justify;
 }
 
 
@@ -749,6 +751,7 @@ main {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  text-align: justify;
 }
 
 
@@ -863,6 +866,7 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  text-align: justify;
 }
 
 
@@ -972,6 +976,7 @@ main {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  text-align: justify;
 }
 
 
@@ -1257,6 +1262,7 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  text-align: justify;
 }
 
 
