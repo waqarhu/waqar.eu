@@ -249,7 +249,7 @@ function displayNameOfAllah() {
   if (nameElement) {
     const fullName = namesOfAllah[currentNameIndex];
     const [arabicName, meaning] = fullName.split(' - ');
-    nameElement.innerHTML = `<strong>${arabicName}</strong><br>${meaning}`;
+    nameElement.innerHTML = `<strong>${arabicName}</strong><br>(${meaning})`;
     currentNameIndex = (currentNameIndex + 1) % namesOfAllah.length;
   }
 }
