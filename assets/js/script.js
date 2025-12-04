@@ -230,20 +230,24 @@ const pages = document.querySelectorAll("[data-page]");
 
 // add event to all nav link
 if (navigationLinks.length > 0 && pages.length > 0) {
-  navigationLinks.forEach((link, index) => {
+  navigationLinks.forEach((link) => {
     link.addEventListener("click", function () {
       // Check for data-page-target attribute first, then fall back to innerHTML
       const targetPage = this.getAttribute('data-page-target') || this.innerHTML.toLowerCase();
-      pages.forEach((page, pageIndex) => {
+      
+      // Remove active from all pages and links first
+      pages.forEach(page => page.classList.remove("active"));
+      navigationLinks.forEach(navLink => navLink.classList.remove("active"));
+      
+      // Add active to matching page and clicked link
+      pages.forEach(page => {
         if (targetPage === page.dataset.page) {
           page.classList.add("active");
-          navigationLinks[pageIndex].classList.add("active");
-          window.scrollTo(0, 0);
-        } else {
-          page.classList.remove("active");
-          navigationLinks[pageIndex].classList.remove("active");
         }
       });
+      
+      this.classList.add("active");
+      window.scrollTo(0, 0);
     });
   });
 }
