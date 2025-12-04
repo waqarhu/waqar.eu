@@ -162,15 +162,66 @@ if (form && formInputs.length > 0 && formBtn) {
     });
   });
 
-  // Form submission handler with loading state
-  form.addEventListener("submit", function(e) {
+  // Form submission handler with loading state and feedback
+  form.addEventListener("submit", async function(e) {
+    e.preventDefault();
+    
+    const formStatus = document.getElementById('form-status');
+    const formData = new FormData(form);
+    
     if (formBtn) {
       formBtn.disabled = true;
       formBtn.innerHTML = '<ion-icon name="hourglass-outline"></ion-icon><span>Sending...</span>';
     }
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        // Success
+        if (formStatus) {
+          formStatus.style.display = 'block';
+          formStatus.style.backgroundColor = '#d4edda';
+          formStatus.style.color = '#155724';
+          formStatus.style.border = '1px solid #c3e6cb';
+          formStatus.innerHTML = '✓ Message sent successfully! I\'ll get back to you soon.';
+        }
+        form.reset();
+        formBtn.setAttribute("disabled", "");
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      // Error
+      if (formStatus) {
+        formStatus.style.display = 'block';
+        formStatus.style.backgroundColor = '#f8d7da';
+        formStatus.style.color = '#721c24';
+        formStatus.style.border = '1px solid #f5c6cb';
+        formStatus.innerHTML = '✗ Oops! Something went wrong. Please try again or email me directly.';
+      }
+    } finally {
+      // Reset button
+      if (formBtn) {
+        formBtn.disabled = false;
+        formBtn.innerHTML = '<ion-icon name="paper-plane"></ion-icon><span>Send Message</span>';
+      }
+      
+      // Hide status message after 5 seconds
+      setTimeout(() => {
+        if (formStatus) {
+          formStatus.style.display = 'none';
+        }
+      }, 5000);
+    }
   });
 }
-
 
 
 // page navigation variables

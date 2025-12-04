@@ -1,12 +1,18 @@
 // Service Worker for waqar.eu
-const CACHE_NAME = 'waqar-portfolio-v2';
+const CACHE_NAME = 'waqar-portfolio-v3';
 const urlsToCache = [
   '/',
   '/index.html',
+  '/404.html',
   '/assets/css/style.min.css',
   '/assets/js/script.min.js',
   '/assets/images/my-avatar.png',
   '/assets/images/logo.ico',
+  // Critical WebP images
+  '/assets/images/avatar-1.webp',
+  '/assets/images/avatar-2.webp',
+  '/assets/images/avatar-3.webp',
+  '/assets/images/avatar-4.webp',
   'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap'
 ];
 
