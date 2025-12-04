@@ -975,13 +975,23 @@ main {
   display: inline-block;
 }
 
-/* Disable hover effect on mobile/touch devices */
-@media (hover: hover) and (pointer: fine) {
-  [class*="devicon-"]:hover {
-    transform: scale(1.5) translateY(-10px);
-    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.4));
-    cursor: pointer;
-    transition: transform 0.05s ease, filter 0.05s ease;
+[class*="devicon-"]:hover {
+  transform: scale(1.5) translateY(-10px);
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.4));
+  cursor: pointer;
+  transition: transform 0.05s ease, filter 0.05s ease;
+}
+
+/* Better mobile/touch behavior */
+@media (max-width: 768px) {
+  [class*="devicon-"] {
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  [class*="devicon-"]:active {
+    transform: scale(1.2) translateY(-3px);
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+    transition: transform 0.1s ease, filter 0.1s ease;
   }
 }
 
