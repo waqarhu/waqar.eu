@@ -1,5 +1,5 @@
 // Service Worker for waqar.eu
-const CACHE_NAME = 'waqar-portfolio-v6';
+const CACHE_NAME = 'waqar-portfolio-v7';
 const DEBUG = false; // Set to true for development debugging
 
 const urlsToCache = [
@@ -8,7 +8,7 @@ const urlsToCache = [
   '/404.html',
   '/assets/css/style.min.css',
   '/assets/js/script.min.js',
-  '/assets/images/my-avatar.png',
+  '/assets/images/my-avatar.webp',
   '/assets/images/my-avatar-3.webp',
   '/assets/images/logo.ico',
   // Critical WebP images

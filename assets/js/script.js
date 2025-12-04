@@ -2,7 +2,7 @@
 
 // Avatar rotation
 const avatarImages = [
-  './assets/images/my-avatar.png',
+  './assets/images/my-avatar.webp',
   './assets/images/my-avatar-3.webp'
   // Add more image paths here
 ];
