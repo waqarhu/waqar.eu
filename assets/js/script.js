@@ -55,48 +55,59 @@ function shuffleTestimonials() {
 // Start testimonials shuffle (every 30 seconds)
 setInterval(shuffleTestimonials, 30000);
 
-// Inspirational Quotes from API
-async function fetchQuote() {
+// Islamic Quotes (Quran & Hadith)
+const islamicQuotes = [
+  // Quran Verses
+  { text: "Indeed, with hardship comes ease.", author: "Quran 94:6" },
+  { text: "And whoever fears Allah - He will make for him a way out.", author: "Quran 65:2" },
+  { text: "So verily, with the hardship, there is relief. Verily, with the hardship, there is relief.", author: "Quran 94:5-6" },
+  { text: "Allah does not burden a soul beyond that it can bear.", author: "Quran 2:286" },
+  { text: "And He is with you wherever you are.", author: "Quran 57:4" },
+  { text: "Indeed, Allah is with those who are patient.", author: "Quran 8:46" },
+  { text: "So remember Me; I will remember you.", author: "Quran 2:152" },
+  { text: "And He found you lost and guided you.", author: "Quran 93:7" },
+  { text: "And whoever relies upon Allah - then He is sufficient for him.", author: "Quran 65:3" },
+  { text: "Indeed, my Lord is near and responsive.", author: "Quran 11:61" },
+  { text: "Whoever does righteousness, whether male or female, while he is a believer - We will surely cause him to live a good life.", author: "Quran 16:97" },
+  { text: "And seek help through patience and prayer.", author: "Quran 2:45" },
+  { text: "Indeed, Allah will not change the condition of a people until they change what is in themselves.", author: "Quran 13:11" },
+  { text: "And whoever puts their trust in Allah, He will be enough for them.", author: "Quran 65:3" },
+  { text: "Do not lose hope, nor be sad.", author: "Quran 3:139" },
+  
+  // Hadith
+  { text: "The best of people are those who are most beneficial to others.", author: "Hadith (Ahmad)" },
+  { text: "Whoever is not merciful to others will not be treated mercifully.", author: "Hadith (Bukhari)" },
+  { text: "The strong person is not the one who can overpower others, but the one who controls himself when angry.", author: "Hadith (Bukhari)" },
+  { text: "Make things easy and do not make them difficult, cheer people up and do not repel them.", author: "Hadith (Bukhari)" },
+  { text: "The believer who has the most perfect faith is the one whose character is finest and who is kindest to his wife.", author: "Hadith (Tirmidhi)" },
+  { text: "A good word is charity.", author: "Hadith (Bukhari)" },
+  { text: "Richness is not having many possessions, but richness is being content with oneself.", author: "Hadith (Bukhari)" },
+  { text: "The most beloved of people to Allah are those who are most beneficial to people.", author: "Hadith (Tabarani)" },
+  { text: "Whoever believes in Allah and the Last Day should speak good or remain silent.", author: "Hadith (Bukhari)" },
+  { text: "None of you truly believes until he loves for his brother what he loves for himself.", author: "Hadith (Bukhari)" },
+  { text: "The best richness is the richness of the soul.", author: "Hadith (Bukhari)" },
+  { text: "The most perfect of believers in faith are those who are the finest in manners.", author: "Hadith (Tirmidhi)" },
+  { text: "Kindness is a mark of faith, and whoever has not kindness has not faith.", author: "Hadith (Muslim)" },
+  { text: "Actions are judged by intentions.", author: "Hadith (Bukhari)" },
+  { text: "Seek knowledge from the cradle to the grave.", author: "Hadith (Ibn Majah)" }
+];
+
+function displayIslamicQuote() {
   const quoteText = document.querySelector('.quote-text');
   const quoteAuthor = document.querySelector('.quote-author');
   
-  if (!quoteText || !quoteAuthor) return;
-  
-  try {
-    // Fetch from ZenQuotes API (free, no auth required)
-    const response = await fetch('https://zenquotes.io/api/random');
-    const data = await response.json();
-    
-    if (data && data[0]) {
-      quoteText.textContent = `"${data[0].q}"`;
-      quoteAuthor.textContent = `— ${data[0].a}`;
-    }
-  } catch (error) {
-    // Fallback to local quotes if API fails
-    const fallbackQuotes = [
-      { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
-      { text: "Innovation distinguishes between a leader and a follower.", author: "Steve Jobs" },
-      { text: "Code is like humor. When you have to explain it, it's bad.", author: "Cory House" },
-      { text: "First, solve the problem. Then, write the code.", author: "John Johnson" },
-      { text: "The best way to predict the future is to invent it.", author: "Alan Kay" },
-      { text: "Make it work, make it right, make it fast.", author: "Kent Beck" },
-      { text: "Simplicity is the soul of efficiency.", author: "Austin Freeman" },
-      { text: "Quality is not an act, it is a habit.", author: "Aristotle" },
-      { text: "Talk is cheap. Show me the code.", author: "Linus Torvalds" },
-      { text: "Perfection is achieved not when there is nothing more to add, but when there is nothing left to take away.", author: "Antoine de Saint-Exupéry" }
-    ];
-    
-    const randomQuote = fallbackQuotes[Math.floor(Math.random() * fallbackQuotes.length)];
+  if (quoteText && quoteAuthor) {
+    const randomQuote = islamicQuotes[Math.floor(Math.random() * islamicQuotes.length)];
     quoteText.textContent = `"${randomQuote.text}"`;
     quoteAuthor.textContent = `— ${randomQuote.author}`;
   }
 }
 
 // Display quote on page load
-fetchQuote();
+displayIslamicQuote();
 
 // Change quote every 2 minutes (120 seconds)
-setInterval(fetchQuote, 120000);
+setInterval(displayIslamicQuote, 120000);
 
 // Utility functions
 const elementToggleFunc = function (elem) { 
