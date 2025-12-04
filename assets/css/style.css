@@ -971,7 +971,7 @@ main {
 \*-----------------------------------*/
 
 [class*="devicon-"] {
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.6s ease, filter 0.6s ease;
   display: inline-block;
 }
 
