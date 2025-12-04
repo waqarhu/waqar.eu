@@ -8,8 +8,10 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://waqar.eu/assets/images/my-avatar.png</image:loc>
-      <image:caption>Waqar Hussain - DevOps Engineer, Platform Engineer, SRE Amsterdam Netherlands</image:caption>
-      <image:title>Waqar Hussain Profile Photo</image:title>
+      <image:caption>Waqar Hussain - Senior DevOps Engineer, Platform Engineer, and Site Reliability Engineer (SRE) based in Amsterdam, Netherlands. Expert in Kubernetes, Docker, AWS, Azure, GCP, Terraform, CI/CD automation, and cloud infrastructure.</image:caption>
+      <image:title>Waqar Hussain - DevOps Engineer Amsterdam | Cloud Infrastructure Specialist</image:title>
+      <image:geo_location>Amsterdam, Netherlands</image:geo_location>
+      <image:license>https://creativecommons.org/licenses/by-nc-nd/4.0/</image:license>
     </image:image>
   </url>
 </urlset>

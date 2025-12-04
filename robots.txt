@@ -1,5 +1,10 @@
 User-agent: *
 Allow: /
+Allow: /assets/images/
+
+# Image indexing
+User-agent: Googlebot-Image
+Allow: /assets/images/
 
 # AI Crawlers
 User-agent: GPTBot
