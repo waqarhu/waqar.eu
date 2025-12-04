@@ -55,6 +55,47 @@ function shuffleTestimonials() {
 // Start testimonials shuffle (every 30 seconds)
 setInterval(shuffleTestimonials, 30000);
 
+// Inspirational Quotes
+const quotes = [
+  { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
+  { text: "Innovation distinguishes between a leader and a follower.", author: "Steve Jobs" },
+  { text: "Code is like humor. When you have to explain it, it's bad.", author: "Cory House" },
+  { text: "First, solve the problem. Then, write the code.", author: "John Johnson" },
+  { text: "Experience is the name everyone gives to their mistakes.", author: "Oscar Wilde" },
+  { text: "In order to be irreplaceable, one must always be different.", author: "Coco Chanel" },
+  { text: "The best way to predict the future is to invent it.", author: "Alan Kay" },
+  { text: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.", author: "Martin Fowler" },
+  { text: "Simplicity is the soul of efficiency.", author: "Austin Freeman" },
+  { text: "Make it work, make it right, make it fast.", author: "Kent Beck" },
+  { text: "The function of good software is to make the complex appear to be simple.", author: "Grady Booch" },
+  { text: "Automation applied to an inefficient operation will magnify the inefficiency.", author: "Bill Gates" },
+  { text: "Infrastructure as Code is not just about automation, it's about collaboration.", author: "DevOps Principle" },
+  { text: "Quality is not an act, it is a habit.", author: "Aristotle" },
+  { text: "Talk is cheap. Show me the code.", author: "Linus Torvalds" },
+  { text: "The best error message is the one that never shows up.", author: "Thomas Fuchs" },
+  { text: "Walking on water and developing software from a specification are easy if both are frozen.", author: "Edward Berard" },
+  { text: "It's not a bug – it's an undocumented feature.", author: "Anonymous" },
+  { text: "Perfection is achieved not when there is nothing more to add, but when there is nothing left to take away.", author: "Antoine de Saint-Exupéry" },
+  { text: "Measuring programming progress by lines of code is like measuring aircraft building progress by weight.", author: "Bill Gates" }
+];
+
+function displayRandomQuote() {
+  const quoteText = document.querySelector('.quote-text');
+  const quoteAuthor = document.querySelector('.quote-author');
+  
+  if (quoteText && quoteAuthor) {
+    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    quoteText.textContent = `"${randomQuote.text}"`;
+    quoteAuthor.textContent = `— ${randomQuote.author}`;
+  }
+}
+
+// Display quote on page load
+displayRandomQuote();
+
+// Change quote every 60 seconds
+setInterval(displayRandomQuote, 60000);
+
 // Utility functions
 const elementToggleFunc = function (elem) { 
   if (elem) elem.classList.toggle("active"); 

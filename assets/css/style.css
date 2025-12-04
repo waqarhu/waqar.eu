@@ -912,6 +912,60 @@ main {
   #TECHNOLOGY ICONS HOVER EFFECT
 \*-----------------------------------*/
 
+.quote-section {
+  margin: 30px 0;
+  padding: 0;
+}
+
+.quote-container {
+  background: var(--border-gradient-onyx);
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-1);
+}
+
+.quote-container:hover {
+  box-shadow: var(--shadow-3);
+}
+
+.quote-container ion-icon {
+  font-size: 24px;
+  color: var(--orange-yellow-crayola);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+#inspirational-quote {
+  margin: 0;
+  font-style: italic;
+}
+
+.quote-text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  line-height: 1.6;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.quote-author {
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-7);
+  font-style: normal;
+  font-weight: var(--fw-600);
+  display: block;
+  text-align: right;
+}
+
+
+/*-----------------------------------*\
+  #TECHNOLOGY ICONS HOVER EFFECT
+\*-----------------------------------*/
+
 .devicon-kubernetes-plain,
 .devicon-docker-plain,
 .devicon-prometheus-original,
