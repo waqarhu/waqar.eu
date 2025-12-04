@@ -18,7 +18,7 @@ function rotateAvatar() {
     setTimeout(() => {
       avatarElement.src = avatarImages[currentAvatarIndex];
       avatarElement.style.opacity = '1';
-    }, 300);
+    }, 2000);
   }
 }
 

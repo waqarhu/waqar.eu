@@ -430,7 +430,7 @@ main {
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 2s ease-in-out;
 }
 
 .info-content .name {
