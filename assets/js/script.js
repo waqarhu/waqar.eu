@@ -3,8 +3,8 @@
 // Avatar rotation
 const avatarImages = [
   './assets/images/my-avatar.png',
-  './assets/images/my-avatar-3.png'
-  // Add more image paths here (my-avatar-2.png when uploaded)
+  './assets/images/my-avatar-3.webp'
+  // Add more image paths here
 ];
 
 let currentAvatarIndex = 0;
