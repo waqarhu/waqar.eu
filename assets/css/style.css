@@ -975,11 +975,14 @@ main {
   display: inline-block;
 }
 
-[class*="devicon-"]:hover {
-  transform: scale(1.5) translateY(-10px);
-  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.4));
-  cursor: pointer;
-  transition: transform 0.05s ease, filter 0.05s ease;
+/* Disable hover effect on mobile/touch devices */
+@media (hover: hover) and (pointer: fine) {
+  [class*="devicon-"]:hover {
+    transform: scale(1.5) translateY(-10px);
+    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.4));
+    cursor: pointer;
+    transition: transform 0.05s ease, filter 0.05s ease;
+  }
 }
 
 
