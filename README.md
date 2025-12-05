@@ -30,6 +30,10 @@ A modern, high-performance portfolio website showcasing Senior DevOps/Platform E
 - 📧 **Working Contact Form** - Async form submission with real-time feedback
 - 🎯 **Custom 404 Page** - Branded error page with navigation
 - 🖼️ **Google Images Ready** - Optimized metadata for image search indexing
+- 🕌 **Islamic Content** - 99 Names of Allah rotation, 80 Quran & Hadith quotes
+- 🖼️ **Avatar Rotation** - Multiple profile pictures with smooth transitions
+- 🎭 **Interactive Icons** - 70+ technology icons with hover/tap animations
+- 📝 **Dynamic Testimonials** - Auto-shuffling client feedback every 30 seconds
 
 ## 🎬 Demo
 
@@ -51,9 +55,9 @@ A modern, high-performance portfolio website showcasing Senior DevOps/Platform E
 - **JavaScript (ES6+)** - Async/await, Fetch API, Service Workers
 
 ### Performance Optimizations
-- **WebP Images** - 44% smaller file sizes compared to JPEG/PNG
+- **WebP Images** - 92% size reduction for avatars (1.1MB → 86KB)
 - **Minified Assets** - Clean-CSS and Terser for CSS/JS compression
-- **Service Worker** - Offline-first caching strategy (v4)
+- **Service Worker** - Offline-first caching strategy (v8)
 - **Resource Hints** - fetchpriority, modulepreload, preload for critical assets
 - **Lazy Loading** - Progressive image loading
 - **Noscript Fallback** - Graceful degradation for non-JS users
@@ -65,7 +69,7 @@ A modern, high-performance portfolio website showcasing Senior DevOps/Platform E
 
 ### SEO & Metadata
 - **Open Graph** - Rich social media previews with og:site_name
-- **Schema.org** - Person, ImageObject, BreadcrumbList, FAQPage structured data
+- **Schema.org** - Person, ImageObject, BreadcrumbList, FAQPage, sameAs (Facebook) structured data
 - **FAQ Schema** - 6 structured Q&A pairs for rich snippets
 - **XML Sitemap** - Enhanced with image metadata (geo_location, license)
 - **Robots.txt** - Googlebot-Image specific optimizations
@@ -125,7 +129,7 @@ waqar.eu/
 ├── index.html              # Main portfolio page
 ├── 404.html                # Custom error page
 ├── manifest.json           # PWA manifest
-├── sw.js                   # Service worker
+├── sw.js                   # Service worker (v8)
 ├── sitemap.xml             # XML sitemap
 ├── robots.txt              # Robots directives
 ├── assets/
@@ -133,25 +137,31 @@ waqar.eu/
 │   │   ├── style.css       # Source styles
 │   │   └── style.min.css   # Minified styles
 │   ├── js/
-│   │   ├── script.js       # Source JavaScript
+│   │   ├── script.js       # Source JavaScript (99 names, quotes, avatar rotation)
 │   │   └── script.min.js   # Minified JavaScript
 │   └── images/
-│       ├── my-avatar.png   # Profile image
-│       ├── icon-*.png      # PWA icons
-│       ├── avatar-*.webp   # WebP testimonial images
-│       └── portfolio/      # Project screenshots
+│       ├── my-avatar.webp      # Main profile image
+│       ├── my-avatar-1.webp    # Secondary avatar for rotation
+│       ├── icon-*.png          # PWA icons
+│       ├── avatar-*.webp       # WebP testimonial images
+│       └── portfolio/          # Project screenshots
 └── website-demo-image/     # README screenshots
 ```
 
 ## 🎯 Features Breakdown
 
 ### Dynamic Content
-- Automatic experience years calculation (2015 → current year)
-- Theme persistence across sessions with localStorage
-- Smooth page transitions with CSS animations
-- Interactive project filtering
-- Async form submission with visual feedback (success/error messages)
-- ARIA live regions for accessibility announcements
+- **99 Names of Allah** - Rotating Asma ul Husna with English translations (every 5 seconds)
+- **Islamic Quotes** - 80 Quran verses and Hadith rotating every 2 minutes
+- **Avatar Rotation** - Multiple profile pictures with 2s fade transition (every 10 seconds)
+- **Technology Icons** - 70+ DevOps/Platform tools with hover animations (disabled on mobile)
+- **Testimonials Shuffle** - Fisher-Yates algorithm randomization (every 30 seconds)
+- **Automatic Experience Years** - Dynamic calculation (2015 → current year)
+- **Theme Persistence** - localStorage-based dark/light mode preference
+- **Smooth Transitions** - CSS animations for page elements
+- **Interactive Filtering** - Project portfolio filtering
+- **Async Form Submission** - Real-time validation with visual feedback
+- **ARIA Live Regions** - Accessibility announcements
 
 ### Contact Form
 - Async form submission with Fetch API
@@ -176,12 +186,15 @@ waqar.eu/
 ## 📈 Performance Metrics
 
 - **Lighthouse Score**: 95+ across all categories
-- **Image Optimization**: 44% size reduction (2072K → 1156K) with WebP
-- **Codebase Cleanup**: 1.8MB saved by removing legacy images
+- **Image Optimization**: 92% size reduction for avatars (my-avatar: 251KB → 19KB, my-avatar-1: 1.1MB → 86KB)
+- **Total WebP Savings**: 2072K → 1156K overall
+- **Codebase Cleanup**: 1.8MB saved by removing legacy PNG images
 - **First Contentful Paint**: < 1.5s
 - **Time to Interactive**: < 3.5s
 - **Total Blocking Time**: < 300ms
-- **Service Worker Cache**: v4 with offline-first strategy
+- **Service Worker Cache**: v8 with offline-first strategy
+- **Technology Icons**: 70+ tools with optimized hover/tap animations
+- **Social Integration**: Facebook, Twitter, LinkedIn, GitHub links
 
 ## 📧 Contact
 
@@ -192,6 +205,7 @@ Want to get in touch? Reach out through:
 - 💼 LinkedIn: [linkedin.com/in/waqar-eu](https://www.linkedin.com/in/waqar-eu/)
 - 🐙 GitHub: [@waqarhu](https://github.com/waqarhu)
 - 🐦 X (Twitter): [@Waqar_eu](https://x.com/Waqar_eu)
+- 📘 Facebook: [facebook.com/WIQI88](https://www.facebook.com/WIQI88)
 
 ## 📄 License
 
@@ -200,11 +214,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - Design inspiration from modern portfolio trends
-- WebP conversion optimization with cwebp 1.3.2
-- Service Worker implementation patterns (cache-first strategy)
+- WebP conversion optimization with cwebp 1.3.2 (85% quality)
+- Service Worker implementation patterns (cache-first strategy, v8)
 - Accessibility best practices from WCAG guidelines
 - Schema.org structured data specifications
 - Google Search Console optimization recommendations
+- 99 Names of Allah (Asma ul Husna) Islamic reference
+- Fisher-Yates shuffle algorithm for testimonials randomization
+- Ionicons library for iconography
+- Devicon library for technology logos (70+ icons)
 
 ---
 
