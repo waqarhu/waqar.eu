@@ -122,10 +122,10 @@
     "url": "https://waqar.eu/assets/images/my-avatar.webp",
     "name": "Waqar Hussain - Sr. DevOps Engineer Platform Engineer SRE Amsterdam",
     "description": "Professional photo of Waqar Hussain, Senior DevOps Engineer, Platform Engineer, and Site Reliability Engineer (SRE) based in Amsterdam, Netherlands. Cloud infrastructure specialist with expertise in Kubernetes, Docker, AWS, Azure, GCP, Terraform, and CI/CD automation.",
-    "width": "400px",
-    "height": "400px",
-    "encodingFormat": "image/png",
-    "uploadDate": "2025-12-04",
+    "width": 400,
+    "height": 400,
+    "encodingFormat": "image/webp",
+    "uploadDate": "2025-12-16",
     "author": {
       "@type": "Person",
       "name": "Waqar Hussain"
@@ -142,7 +142,14 @@
     "creditText": "Waqar Hussain",
     "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
     "acquireLicensePage": "https://waqar.eu/#contact",
-    "keywords": "Waqar Hussain, Sr. DevOps Engineer, Platform Engineer, SRE, Amsterdam, Netherlands, Cloud Infrastructure, Kubernetes, Docker, AWS, Azure"
+    "keywords": "Waqar Hussain, Sr. DevOps Engineer, Platform Engineer, SRE, Amsterdam, Netherlands, Cloud Infrastructure, Kubernetes, Docker, AWS, Azure",
+    "representativeOfPage": true,
+    "thumbnail": {
+      "@type": "ImageObject",
+      "url": "https://waqar.eu/assets/images/my-avatar.webp",
+      "width": 400,
+      "height": 400
+    }
   }
   </script>
 
@@ -245,6 +252,72 @@
           "@type": "Answer",
           "text": "Waqar is based in Amsterdam, Netherlands, and works with organizations across Europe on DevOps and cloud infrastructure projects."
         }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Portfolio Images Collection Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "DevOps Portfolio Projects by Waqar Hussain",
+    "description": "Cloud infrastructure, CI/CD, and monitoring projects showcasing DevOps expertise",
+    "itemListElement": [
+      {
+        "@type": "ImageObject",
+        "position": 1,
+        "contentUrl": "https://waqar.eu/assets/images/portfolio/kubernetes.webp",
+        "name": "Kubernetes Multi-Cluster Setup",
+        "description": "Production-grade Kubernetes cluster with automated scaling, high availability, and multi-region deployment",
+        "encodingFormat": "image/webp",
+        "keywords": "Kubernetes, Docker, Cloud Infrastructure, Container Orchestration, Microservices"
+      },
+      {
+        "@type": "ImageObject",
+        "position": 2,
+        "contentUrl": "https://waqar.eu/assets/images/portfolio/azure-devops.webp",
+        "name": "Azure DevOps CI/CD Pipeline",
+        "description": "Enterprise CI/CD pipeline with automated testing, security scanning, and multi-stage deployments",
+        "encodingFormat": "image/webp",
+        "keywords": "Azure DevOps, CI/CD, Pipeline Automation, DevOps"
+      },
+      {
+        "@type": "ImageObject",
+        "position": 3,
+        "contentUrl": "https://waqar.eu/assets/images/portfolio/grafana.webp",
+        "name": "Grafana Monitoring Dashboard",
+        "description": "Real-time metrics visualization and alerting dashboard for cloud infrastructure monitoring",
+        "encodingFormat": "image/webp",
+        "keywords": "Grafana, Monitoring, Observability, Metrics, Dashboard"
+      },
+      {
+        "@type": "ImageObject",
+        "position": 4,
+        "contentUrl": "https://waqar.eu/assets/images/portfolio/terraform.webp",
+        "name": "Terraform Infrastructure as Code",
+        "description": "Multi-cloud infrastructure provisioning using Terraform for AWS, Azure, and GCP",
+        "encodingFormat": "image/webp",
+        "keywords": "Terraform, Infrastructure as Code, IaC, AWS, Azure, GCP"
+      },
+      {
+        "@type": "ImageObject",
+        "position": 5,
+        "contentUrl": "https://waqar.eu/assets/images/portfolio/prometheus.webp",
+        "name": "Prometheus Monitoring System",
+        "description": "Prometheus-based monitoring with custom metrics collection and intelligent alerting",
+        "encodingFormat": "image/webp",
+        "keywords": "Prometheus, Monitoring, Alerting, Metrics, SRE"
+      },
+      {
+        "@type": "ImageObject",
+        "position": 6,
+        "contentUrl": "https://waqar.eu/assets/images/portfolio/docker.webp",
+        "name": "Docker Containerization Platform",
+        "description": "Microservices architecture with Docker containers and container orchestration",
+        "encodingFormat": "image/webp",
+        "keywords": "Docker, Containers, Microservices, Containerization"
       }
     ]
   }
@@ -1378,7 +1451,11 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/portfolio/kubernetes.webp" alt="kubernetes cluster" loading="lazy">
+                  <img src="./assets/images/portfolio/kubernetes.webp" 
+                       alt="Kubernetes Multi-Cluster Setup - Production DevOps Infrastructure by Waqar Hussain" 
+                       width="750" height="563" 
+                       loading="lazy" 
+                       itemprop="image">
                 </figure>
 
                 <h3 class="project-title">Kubernetes Multi-Cluster Setup</h3>
@@ -1396,7 +1473,11 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/portfolio/azure-devops.webp" alt="azure devops pipeline" loading="lazy">
+                  <img src="./assets/images/portfolio/azure-devops.webp" 
+                       alt="Azure DevOps CI/CD Pipeline - Automated Build and Deployment by Waqar Hussain" 
+                       width="750" height="563" 
+                       loading="lazy" 
+                       itemprop="image">
                 </figure>
 
                 <h3 class="project-title">Azure DevOps CI/CD Pipeline</h3>
@@ -1414,7 +1495,11 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/portfolio/grafana.webp" alt="grafana dashboard" loading="lazy">
+                  <img src="./assets/images/portfolio/grafana.webp" 
+                       alt="Grafana Monitoring Dashboard - Real-time Metrics Visualization by Waqar Hussain" 
+                       width="750" height="563" 
+                       loading="lazy" 
+                       itemprop="image">
                 </figure>
 
                 <h3 class="project-title">Grafana Monitoring Dashboard</h3>
@@ -1432,7 +1517,11 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/portfolio/terraform.webp" alt="terraform infrastructure" loading="lazy">
+                  <img src="./assets/images/portfolio/terraform.webp" 
+                       alt="Terraform Infrastructure as Code - Multi-Cloud Provisioning by Waqar Hussain" 
+                       width="750" height="563" 
+                       loading="lazy" 
+                       itemprop="image">
                 </figure>
 
                 <h3 class="project-title">Terraform IaC Implementation</h3>
@@ -1450,7 +1539,11 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/portfolio/elk-stack.webp" alt="elk stack" loading="lazy">
+                  <img src="./assets/images/portfolio/elk-stack.webp" 
+                       alt="ELK Stack Implementation - Elasticsearch Logstash Kibana by Waqar Hussain" 
+                       width="750" height="563" 
+                       loading="lazy" 
+                       itemprop="image">
                 </figure>
 
                 <h3 class="project-title">ELK Stack Log Management</h3>
@@ -1468,7 +1561,11 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/portfolio/docker.webp" alt="docker containerization" loading="lazy">
+                  <img src="./assets/images/portfolio/docker.webp" 
+                       alt="Docker Containerization Platform - Microservices Architecture by Waqar Hussain" 
+                       width="750" height="563" 
+                       loading="lazy" 
+                       itemprop="image">
                 </figure>
 
                 <h3 class="project-title">Docker Containerization</h3>
@@ -1486,7 +1583,11 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/portfolio/aws.webp" alt="aws migration" loading="lazy">
+                  <img src="./assets/images/portfolio/aws.webp" 
+                       alt="AWS Cloud Migration - Enterprise Infrastructure Migration by Waqar Hussain" 
+                       width="750" height="563" 
+                       loading="lazy" 
+                       itemprop="image">
                 </figure>
 
                 <h3 class="project-title">AWS Cloud Migration</h3>
@@ -1504,7 +1605,11 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/portfolio/prometheus.webp" alt="prometheus monitoring" loading="lazy">
+                  <img src="./assets/images/portfolio/prometheus.webp" 
+                       alt="Prometheus Monitoring System - Metrics and Alerting by Waqar Hussain" 
+                       width="750" height="563" 
+                       loading="lazy" 
+                       itemprop="image">
                 </figure>
 
                 <h3 class="project-title">Prometheus Alert System</h3>
@@ -1522,7 +1627,11 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/portfolio/jenkins.webp" alt="jenkins pipeline" loading="lazy">
+                  <img src="./assets/images/portfolio/jenkins.webp" 
+                       alt="Jenkins CI/CD Pipeline - Automated Build and Test by Waqar Hussain" 
+                       width="750" height="563" 
+                       loading="lazy" 
+                       itemprop="image">
                 </figure>
 
                 <h3 class="project-title">Jenkins Automation Pipeline</h3>
@@ -1560,7 +1669,11 @@
               <a href="https://kubernetes.io/docs/concepts/" target="_blank">
 
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/portfolio/blog-k8s.webp" alt="Kubernetes best practices" loading="lazy">
+                  <img src="./assets/images/portfolio/blog-k8s.webp" 
+                       alt="Kubernetes Best Practices for Production - DevOps Guide by Waqar Hussain" 
+                       width="750" height="422" 
+                       loading="lazy" 
+                       itemprop="image">
                 </figure>
 
                 <div class="blog-content">
@@ -1588,7 +1701,11 @@
               <a href="https://azure.microsoft.com/en-us/products/devops" target="_blank">
 
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/portfolio/blog-cicd.webp" alt="CI/CD pipeline automation" loading="lazy">
+                  <img src="./assets/images/portfolio/blog-cicd.webp" 
+                       alt="Building Efficient CI/CD Pipelines - Automation Guide by Waqar Hussain" 
+                       width="750" height="422" 
+                       loading="lazy" 
+                       itemprop="image">
                 </figure>
 
                 <div class="blog-content">
@@ -1616,7 +1733,11 @@
               <a href="https://prometheus.io/docs/introduction/overview/" target="_blank">
 
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/portfolio/prometheus.webp" alt="Monitoring with Prometheus" loading="lazy">
+                  <img src="./assets/images/portfolio/prometheus.webp" 
+                       alt="Prometheus and Grafana Monitoring Setup - Observability Guide by Waqar Hussain" 
+                       width="750" height="422" 
+                       loading="lazy" 
+                       itemprop="image">
                 </figure>
 
                 <div class="blog-content">
@@ -1644,7 +1765,11 @@
               <a href="https://www.terraform.io/intro" target="_blank">
 
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/portfolio/blog-terraform.webp" alt="Infrastructure as Code" loading="lazy">
+                  <img src="./assets/images/portfolio/blog-terraform.webp" 
+                       alt="Infrastructure as Code with Terraform - Multi-Cloud IaC Guide by Waqar Hussain" 
+                       width="750" height="422" 
+                       loading="lazy" 
+                       itemprop="image">
                 </figure>
 
                 <div class="blog-content">
@@ -1672,7 +1797,11 @@
               <a href="https://docs.docker.com/get-started/" target="_blank">
 
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/portfolio/blog-docker.webp" alt="Docker containerization" loading="lazy">
+                  <img src="./assets/images/portfolio/blog-docker.webp" 
+                       alt="Docker Optimization Techniques - Container Best Practices by Waqar Hussain" 
+                       width="750" height="422" 
+                       loading="lazy" 
+                       itemprop="image">
                 </figure>
 
                 <div class="blog-content">
@@ -1700,7 +1829,11 @@
               <a href="https://aws.amazon.com/architecture/well-architected/" target="_blank">
 
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/portfolio/blog-cloud.webp" alt="Cloud cost optimization" loading="lazy">
+                  <img src="./assets/images/portfolio/blog-cloud.webp" 
+                       alt="Cloud Cost Optimization Strategies - AWS Azure GCP Cost Reduction by Waqar Hussain" 
+                       width="750" height="422" 
+                       loading="lazy" 
+                       itemprop="image">
                 </figure>
 
                 <div class="blog-content">
