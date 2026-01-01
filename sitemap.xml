@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://waqar.eu/</loc>
-    <lastmod>2025-12-16</lastmod>
+    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://waqar.eu/assets/images/my-avatar.webp</image:loc>
+      <image:title>Waqar Hussain - Sr. DevOps Engineer Amsterdam</image:title>
+      <image:caption>Senior DevOps Engineer and SRE specialist in Amsterdam with expertise in Kubernetes, Docker, AWS, Azure, and cloud infrastructure</image:caption>
+    </image:image>
   </url>
 </urlset>
