@@ -1,0 +1,260 @@
+Waqar Hussain - DevOps Engineer Portfolio
+
+# sidebar
+
+alt = Waqar Hussain
+Waqar Hussain
+DevOps Engineer
+
+Show Contacts
+
+Email
+info@waqar.eu
+
+LinkedIn
+linkedin.com/in/waqar-eu
+
+GitHub
+github.com/waqarhu
+
+WhatsApp
++31 68 434 6334
+
+Location
+Amsterdam, Netherlands
+
+# navbar
+
+About
+Resume
+Portfolio
+Blog
+Contact
+
+# about
+
+About me
+
+DevOps Engineer with over 10 years of experience specializing in cloud-native infrastructure, CI/CD automation, and observability frameworks. Currently at ING, I architect scalable solutions using Kubernetes, Azure DevOps, and Infrastructure-as-Code across AWS, Azure, and GCP environments.
+
+I focus on GitOps workflows, microservices architecture, and SRE principles to build resilient systems. My work has delivered measurable results: 40% infrastructure cost reduction, 70% faster deployments, and enhanced reliability through comprehensive monitoring with Prometheus, Grafana, and ELK Stack.
+
+
+## service
+
+What I'm doing
+
+alt = design icon
+Infrastructure & Cloud
+Managing multi-cloud infrastructure across AWS, Azure, and GCP with Kubernetes orchestration.
+
+alt = Web development icon
+CI/CD Automation
+Building automated deployment pipelines using Azure DevOps and TeamCity for faster releases.
+
+alt = mobile app icon
+Monitoring & Observability
+Implementing comprehensive monitoring with Prometheus, Grafana, and ELK Stack.
+
+alt = camera icon
+Data Integration
+Designing scalable ETL pipelines using IBM InfoSphere and DataStage.
+
+
+## testimonials
+
+Testimonials
+
+alt = Daniel lewis
+Daniel lewis
+Waqar optimized our multi-cloud infrastructure, reducing operational costs by 40% through strategic Kubernetes cluster management and automated scaling policies. His implementation of GitOps workflows with ArgoCD streamlined our deployment process significantly.
+
+alt = Jessica miller
+Jessica miller
+Waqar designed and deployed our complete observability stack using Prometheus for metrics collection, Grafana for visualization, and ELK for log aggregation. His custom alerting rules and SLO dashboards reduced MTTR by 60% and improved our incident response capabilities.
+
+alt = Emily evans
+Emily evans
+Waqar architected and executed our cloud migration from on-premises to AWS. His phased approach using containerization with Docker and orchestration via EKS ensured zero downtime. The infrastructure-as-code implementation with Terraform enabled reproducible deployments.
+
+alt = Henry william
+Henry william
+Waqar architected our CI/CD pipelines using Azure DevOps with automated testing, security scanning, and progressive deployment strategies. His implementation of blue-green deployments and feature flags reduced deployment risk while enabling continuous delivery with 50+ deployments per week.
+
+
+## Technologies & Tools
+
+Technologies & Tools
+
+alt = Kubernetes
+alt = Docker
+alt = Prometheus
+alt = Grafana
+alt = Terraform
+alt = Azure DevOps
+
+
+
+# resume
+
+Resume
+
+Education
+
+University of Bedfordshire
+Sep 2011 — Apr 2013
+Master of Science in Computer Networks. Advanced study in network architecture, protocols, security, and distributed systems.
+
+Air University
+Sep 2006 — 2010
+Bachelor of Engineering in Telecommunications Engineering. Foundation in network infrastructure, systems administration, and telecommunications technologies.
+
+Fazaia Inter College (FIC)
+Sep 1995 — Apr 2006
+Pre-Engineering education with focus on mathematics, physics, and computer science fundamentals.
+
+Experience
+
+DevOps Engineer — ING
+Sep 2023 — Present
+Building robust CI/CD pipelines using Azure DevOps. Designing scalable ETL pipelines with IBM InfoSphere & DataStage. Implementing comprehensive monitoring with Prometheus, Grafana & Kibana for system reliability.
+
+DevOps Engineer — Sirius Media B.V.
+Jun 2022 — May 2023
+Implemented CI/CD pipelines using TeamCity achieving complete automation. Optimized cloud infrastructure with GKE and EKS clusters, reducing costs by 40%. Led 24/7 incident handling and resolution.
+
+SRE-Ops — Payconiq
+Jan 2019 — May 2022
+Provisioned and managed multi-cloud infrastructure using AWS, Azure, and GCP. Monitored system performance with Grafana, Prometheus, and New Relic. Conducted incident management and postmortem meetings.
+
+RF Planning & Optimization — Ufone
+Aug 2017 — Sep 2018
+Conducted comprehensive planning and optimization for 2G/3G/4G networks. Utilized MapInfo and Atoll for predictive analysis, enhancing network performance and coverage.
+
+Resident Engineer IT — Ufone
+Sep 2015 — Jul 2017
+Managed IT mediation using Huawei's TopEng Application on Linux RedHat Servers. Configured protocols including SSH, FTP, and DNS. Conducted traffic analysis with Wireshark optimizing network performance.
+
+My skills
+
+Kubernetes & Docker
+90%
+CI/CD (Azure DevOps, TeamCity)
+95%
+Cloud Platforms (AWS, Azure, GCP)
+85%
+Monitoring (Prometheus, Grafana, ELK)
+90%
+Infrastructure as Code (Terraform, Ansible)
+80%
+IBM InfoSphere & DataStage
+85%
+
+
+
+# portfolio
+
+Portfolio
+
+All
+Cloud Infrastructure
+CI/CD
+Monitoring
+
+Select category
+All
+Cloud Infrastructure
+CI/CD
+Monitoring
+
+alt = kubernetes cluster
+Kubernetes Multi-Cluster Setup
+Cloud Infrastructure
+
+alt = azure devops pipeline
+Azure DevOps CI/CD Pipeline
+CI/CD
+
+alt = grafana dashboard
+Grafana Monitoring Dashboard
+Monitoring
+
+alt = terraform infrastructure
+Terraform IaC Implementation
+Cloud Infrastructure
+
+alt = elk stack
+ELK Stack Log Management
+Monitoring
+
+alt = docker containerization
+Docker Containerization
+CI/CD
+
+alt = aws migration
+AWS Cloud Migration
+Cloud Infrastructure
+
+alt = prometheus monitoring
+Prometheus Alert System
+Monitoring
+
+alt = jenkins pipeline
+Jenkins Automation Pipeline
+CI/CD
+
+
+
+# blog
+
+Blog
+
+alt = Kubernetes best practices
+DevOps
+Nov 15, 2024
+Kubernetes Best Practices for Production
+Essential strategies for deploying and managing Kubernetes clusters in production environments.
+
+alt = CI/CD pipeline automation
+DevOps
+Oct 28, 2024
+Building Efficient CI/CD Pipelines
+How to design and implement automated deployment pipelines using Azure DevOps and TeamCity.
+
+alt = Monitoring with Prometheus
+Monitoring
+Sep 12, 2024
+Prometheus and Grafana Setup Guide
+Complete guide to setting up comprehensive monitoring and alerting systems.
+
+alt = Infrastructure as Code
+DevOps
+Aug 05, 2024
+Infrastructure as Code with Terraform
+Learn how to manage cloud infrastructure using Terraform for AWS, Azure, and GCP.
+
+alt = Docker containerization
+DevOps
+Jul 20, 2024
+Docker Optimization Techniques
+Best practices for creating efficient Docker images and optimizing container performance.
+
+alt = Cloud cost optimization
+Cloud
+Jun 10, 2024
+Cloud Cost Optimization Strategies
+Proven methods to reduce cloud infrastructure costs while maintaining performance.
+
+
+
+# contact
+
+Contact
+
+Contact Form
+
+Full name
+Email address
+Your Message
+
+Send Message

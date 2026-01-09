@@ -1,0 +1,19 @@
+{
+  "name": "waqar.eu",
+  "version": "1.0.0",
+  "description": "![GitHub repo size](https://img.shields.io/github/repo-size/waqarhu/waqar.eu) ![GitHub stars](https://img.shields.io/github/stars/waqarhu/waqar.eu?style=social) ![GitHub forks](https://img.shields.io/github/forks/waqarhu/waqar.eu?style=social) [![Twitter Follow](https://img.shields.io/twitter/follow/Waqar_eu?style=social)](https://twitter.com/intent/follow?screen_name=Waqar_eu)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "cleancss -o assets/css/style.min.css assets/css/style.css",
+    "build:js": "terser assets/js/script.js -o assets/js/script.min.js -c -m",
+    "build": "npm run build:css && npm run build:js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "terser": "^5.44.1"
+  }
+}
