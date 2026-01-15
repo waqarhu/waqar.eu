@@ -9,25 +9,48 @@ const avatarImages = [
 
 let currentAvatarIndex = 0;
 const avatarElement = document.getElementById('profile-avatar');
+let avatarRotationInterval = null;
 
 function rotateAvatar() {
   if (avatarImages.length > 1 && avatarElement) {
     currentAvatarIndex = (currentAvatarIndex + 1) % avatarImages.length;
-    avatarElement.style.opacity = '0';
+    avatarElement.classList.add('fade-out');
     
     setTimeout(() => {
       avatarElement.src = avatarImages[currentAvatarIndex];
-      avatarElement.style.opacity = '1';
-    }, 2000);
+      avatarElement.classList.remove('fade-out');
+    }, 300);
   }
 }
 
 // Start rotation if multiple images exist
 if (avatarImages.length > 1) {
-  setInterval(rotateAvatar, 10000); // Change image every 10 seconds
+  avatarRotationInterval = setInterval(rotateAvatar, 10000); // Change image every 10 seconds
+}
+
+// Cleanup function for intervals
+function cleanupIntervals() {
+  if (avatarRotationInterval) {
+    clearInterval(avatarRotationInterval);
+    avatarRotationInterval = null;
+  }
+  if (typeof testimonialShuffleInterval !== 'undefined' && testimonialShuffleInterval) {
+    clearInterval(testimonialShuffleInterval);
+    testimonialShuffleInterval = null;
+  }
+  if (typeof nameOfAllahInterval !== 'undefined' && nameOfAllahInterval) {
+    clearInterval(nameOfAllahInterval);
+    nameOfAllahInterval = null;
+  }
+  if (typeof quoteInterval !== 'undefined' && quoteInterval) {
+    clearInterval(quoteInterval);
+    quoteInterval = null;
+  }
 }
 
 // Testimonials shuffle function
+let testimonialShuffleInterval = null;
+
 function shuffleTestimonials() {
   const testimonialsList = document.querySelector('.testimonials-list');
   if (!testimonialsList) return;
@@ -41,7 +64,8 @@ function shuffleTestimonials() {
     [items[i], items[j]] = [items[j], items[i]];
   }
   
-  // Fade out effect
+  // Use CSS transition instead of manual opacity manipulation
+  testimonialsList.style.transition = 'opacity 0.3s ease-in-out';
   testimonialsList.style.opacity = '0';
   
   setTimeout(() => {
@@ -49,11 +73,11 @@ function shuffleTestimonials() {
     items.forEach(item => testimonialsList.appendChild(item));
     // Fade in effect
     testimonialsList.style.opacity = '1';
-  }, 500);
+  }, 300);
 }
 
 // Start testimonials shuffle (every 30 seconds)
-setInterval(shuffleTestimonials, 30000);
+testimonialShuffleInterval = setInterval(shuffleTestimonials, 30000);
 
 // 99 Names of Allah (Asma ul Husna)
 const namesOfAllah = [
@@ -243,6 +267,8 @@ const islamicQuotes = [
 ];
 
 let currentNameIndex = 0;
+let nameOfAllahInterval = null;
+let quoteInterval = null;
 
 function displayNameOfAllah() {
   const nameElement = document.querySelector('.allah-name');
@@ -273,10 +299,10 @@ displayNameOfAllah();
 displayIslamicQuote();
 
 // Change name of Allah every 5 seconds
-setInterval(displayNameOfAllah, 5000);
+nameOfAllahInterval = setInterval(displayNameOfAllah, 5000);
 
 // Change quote every 2 minutes (120 seconds)
-setInterval(displayIslamicQuote, 120000);
+quoteInterval = setInterval(displayIslamicQuote, 120000);
 
 // Utility functions
 const elementToggleFunc = function (elem) { 
@@ -365,7 +391,7 @@ if (overlay) {
 // custom select variables
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
+const selectValue = document.querySelector("[data-select-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
 if (select) {
@@ -427,6 +453,12 @@ const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
+// Email validation function
+const validateEmail = function(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
+
 // add event to all form input field
 if (form && formInputs.length > 0 && formBtn) {
   formInputs.forEach(input => {
@@ -445,6 +477,23 @@ if (form && formInputs.length > 0 && formBtn) {
     e.preventDefault();
     
     const formStatus = document.getElementById('form-status');
+    const emailInput = form.querySelector('input[type="email"]');
+    
+    // Validate email format
+    if (emailInput && !validateEmail(emailInput.value)) {
+      if (formStatus) {
+        formStatus.style.display = 'block';
+        formStatus.style.backgroundColor = '#f8d7da';
+        formStatus.style.color = '#721c24';
+        formStatus.style.border = '1px solid #f5c6cb';
+        formStatus.innerHTML = '✗ Please enter a valid email address.';
+      }
+      setTimeout(() => {
+        if (formStatus) formStatus.style.display = 'none';
+      }, 5000);
+      return;
+    }
+    
     const formData = new FormData(form);
     
     if (formBtn) {
@@ -476,6 +525,7 @@ if (form && formInputs.length > 0 && formBtn) {
         throw new Error('Form submission failed');
       }
     } catch (error) {
+      console.error('Form submission error:', error);
       // Error
       if (formStatus) {
         formStatus.style.display = 'block';
@@ -589,7 +639,13 @@ if ('serviceWorker' in navigator) {
         // Service Worker registered successfully
       })
       .catch(err => {
-        console.error('Service Worker registration failed:', err);
+        console.warn('Service Worker registration failed (offline mode):', err.message);
       });
   });
 }
+
+// Cleanup intervals before leaving page
+window.addEventListener('beforeunload', cleanupIntervals);
+
+// Also cleanup when navigating away from page
+window.addEventListener('pagehide', cleanupIntervals);

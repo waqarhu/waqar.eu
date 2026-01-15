@@ -309,6 +309,15 @@ article.active {
   100% { opacity: 1; }
 }
 
+/* Avatar fade animation */
+#profile-avatar {
+  transition: opacity 0.3s ease-in-out;
+}
+
+#profile-avatar.fade-out {
+  opacity: 0;
+}
+
 .h2,
 .h3,
 .h4,
