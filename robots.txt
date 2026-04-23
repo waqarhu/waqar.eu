@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+Allow: /assets/images/
+
+# Explicitly disallow redirect URLs
+# Google should only index https://waqar.eu/ (with trailing slash)
+Disallow: /index.html
+
+# Image indexing
+User-agent: Googlebot-Image
+Allow: /assets/images/
+
+# AI Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Sitemap
+Sitemap: https://waqar.eu/sitemap.xml

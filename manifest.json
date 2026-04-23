@@ -1,0 +1,32 @@
+{
+  "name": "Waqar Hussain - DevOps Engineer Portfolio",
+  "short_name": "Waqar Hussain",
+  "description": "Senior DevOps Engineer and Site Reliability Engineer with 10+ years experience in cloud infrastructure, Kubernetes, and CI/CD automation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#141414",
+  "theme_color": "#ffdb70",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/images/logo.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/assets/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "portfolio", "devops"],
+  "lang": "en-US",
+  "dir": "ltr"
+}
